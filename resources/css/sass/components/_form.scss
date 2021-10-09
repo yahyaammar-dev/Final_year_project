@@ -1,0 +1,120 @@
+.formContainer{
+    background: url("../images/signup-bg.jpg");
+    height: 85vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form{
+        background-color: $primary-color-transparent;
+        display: inline-block;
+        padding: 30px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 10px;
+        .form__label{
+            color: white;
+            font-family: $secondary-font;
+        }
+        .form__input{
+            border: none;
+            outline: none;
+            background: $lightgray-color;
+            padding: 7px 0px 7px 35px;
+            border-radius: 5px;
+        }
+        .form__icon{
+            color: $primary-color;
+            position: absolute;
+            padding: 5.5px 0 5px 10px;
+        }
+        .submit{
+            grid-column-start: 2;
+            grid-row-start: 5;
+        }
+    }
+}
+
+
+@include tab{
+    .formContainer{
+        .form{
+            display: block;
+            .form__label{
+                display: none;
+            }
+            .form__input{
+                border: none;
+                outline: none;
+                background: $lightgray-color;
+                padding: 7px 0px 7px 35px;
+                border-radius: 5px;
+            }
+            .form__icon{
+                color: $primary-color;
+                position: absolute;
+                padding: 5.5px 0 5px 10px;
+            }
+            .submit{
+                grid-column-start: 2;
+                grid-row-start: 5;
+            }
+        }
+    }    
+}
+
+@include phonexl{
+    .formContainer{
+        .form{
+            display: block;
+            .form__label{
+                display: none;
+            }
+            .form__input{
+                border: none;
+                outline: none;
+                background: $lightgray-color;
+                padding: 7px 0px 7px 35px;
+                border-radius: 5px;
+            }
+            .form__icon{
+                color: $primary-color;
+                position: absolute;
+                padding: 5.5px 0 5px 10px;
+            }
+            .submit{
+                grid-column-start: 2;
+                grid-row-start: 5;
+            }
+        }
+    }    
+}
+@include phone{
+    .formContainer{
+        .form{
+            display: block;
+            .form__label{
+                display: none;
+            }
+            .form__input{
+                border: none;
+                outline: none;
+                background: $lightgray-color;
+                padding: 7px 0px 7px 35px;
+                border-radius: 5px;
+            }
+            .form__icon{
+                color: $primary-color;
+                position: absolute;
+                padding: 5.5px 0 5px 10px;
+            }
+            .submit{
+                grid-column-start: 2;
+                grid-row-start: 5;
+            }
+        }
+    }    
+}

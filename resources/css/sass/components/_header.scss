@@ -1,0 +1,16 @@
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    .header__icons{
+        display: flex;
+        align-items: center;
+        .search__icon{
+            font-size: 26px;
+            padding: 10px;
+            color: $primary-color;
+        }
+    }
+}

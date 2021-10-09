@@ -1,0 +1,116 @@
+.footer{
+    width: 90%;
+    margin: auto;
+    padding: 4rem 0;
+    .footersectionone{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        .footer__section{
+            .footer__list{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            @include tab{
+                .footer__secheading{
+                    text-align: center;
+                }
+                .footer__list{
+                    text-align: center;
+                }
+            }
+            @include phonexl{
+                .footer__secheading{
+                    text-align: center;
+                }
+                .footer__list{
+                    text-align: center;
+                }
+            }
+            @include phone{
+                .footer__secheading{
+                    text-align: center;
+                }
+                .footer__list{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .footersectiontwo{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        .footerinfo{
+            margin-top: 4rem;
+            .footerinfo__paragrapgh{
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .footersectiontwo__right{
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-top: 4.5rem;
+            .logo{
+                position: absolute;
+                right: 0;
+            }
+        }
+        @include tab{
+            .footersectiontwo__right{
+                display: none;
+            }
+        }
+        @include phone{
+            .footersectiontwo__right{
+                display: none;
+            }
+        }
+        @include phonexl{
+            .footersectiontwo__right{
+                display: none;
+            }
+        }
+    }
+    @include tab{
+        .footersectiontwo{
+            display: block;
+        }
+        .footersectionone{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .footer--lastsection{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            padding-top: 1rem;
+        }
+    }
+    @include phone{
+        .footersectiontwo{
+            display: block;
+        }
+        .footersectionone{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .footer--lastsection{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            padding-top: 1rem;
+        }
+    }
+    @include phonexl{
+        .footersectiontwo{
+            display: block;
+        }
+        .footersectionone{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .footer--lastsection{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            padding-top: 1rem;
+        }
+    }
+}
+

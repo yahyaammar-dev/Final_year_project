@@ -1,0 +1,45 @@
+$large: 1440px;
+$desktop: 1200px;
+$tabxl: 1024px;
+$tab: 900px;
+$phonexl: 600px;
+$phone: 300px;
+
+
+@mixin large {
+  @media (min-width: #{$desktop+1}) and (max-width: #{$large}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$tabxl+1}) and (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+
+@mixin tabxl {
+    @media (min-width: #{$tab+1}) and (max-width: #{$tabxl}) {
+      @content;
+    }
+  }
+
+  @mixin tab {
+    @media (min-width: #{$phonexl+1}) and (max-width: #{$tab}) {
+      @content;
+    }
+  }
+
+
+  @mixin phonexl {
+    @media (min-width: #{$phone+1}) and (max-width: #{$phonexl}) {
+      @content;
+    }
+  }
+
+
+  @mixin phone {
+    @media (max-width: #{$phone}) {
+      @content;
+    }
+  }

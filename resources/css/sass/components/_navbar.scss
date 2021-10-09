@@ -1,0 +1,48 @@
+.navbar{
+    .navbar__list{
+        list-style-type: none;
+        .navbar__listlink{
+            text-decoration: none;
+            color: $primary-color;
+            .navbar__listitem{
+                display: inline;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+
+@include tab{
+    .navbar{
+        display: none;
+    }
+}
+@include phonexl{
+    .navbar{
+        display: none;
+    }
+}
+@include phone{
+    .navbar{
+        display: none;
+    }
+}
+
+
+.navbar--active{
+    position: absolute;
+    top: 90px;
+    left: 0;
+    display: block;
+    background-color: $secondary-color;
+    .navbar__list{
+        width: 40vw;
+        .navbar__listlink{
+            .navbar__listitem{
+                display: block;
+                color: white;
+            }
+        }
+    }
+}

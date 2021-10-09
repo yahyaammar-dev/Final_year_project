@@ -1,0 +1,21 @@
+.hamburger{
+    cursor: pointer;
+}
+
+@include large{
+    .hamburger{
+        display: none;
+    }
+}
+
+@include desktop{
+    .hamburger{
+        display: none;
+    }
+}
+
+@include tabxl{
+    .hamburger{
+        display: none;
+    }
+}
