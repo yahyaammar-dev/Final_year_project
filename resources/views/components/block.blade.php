@@ -1,4 +1,4 @@
-<section class="blockscontainer">
+<section class="blockscontainer blockscontainer--singleblock">
     <div class="blocks">
         <div class="blocks__list">
             <div class="blocks__item">

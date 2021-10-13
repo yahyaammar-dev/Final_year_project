@@ -65,3 +65,7 @@ Route::get('author',function (){
 Route::get('hotellisting',function (){
     return view("hotellisting");
 });
+
+Route::get('destinationlisting',function (){
+    return view("destinationlisting");
+});

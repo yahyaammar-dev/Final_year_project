@@ -1,0 +1,13 @@
+.bannercontainer{
+    margin: 0 auto;
+    background: url("../images/signup-bg.jpg");
+    .banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 20rem;
+        .banner__heading{
+            color: $white-color;
+        }
+    }
+}

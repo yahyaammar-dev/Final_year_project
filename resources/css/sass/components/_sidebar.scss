@@ -1,0 +1,15 @@
+.sidebarcontainer{
+    .sidebar{
+        margin-right: 2rem;
+        .sidebar__main{
+            
+        }
+        .sidebar__listcont{
+            .sidebar__title{
+                display: flex; 
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}
