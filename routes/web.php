@@ -21,3 +21,47 @@ Route::get('/', function () {
 Route::get('signup',function (){
     return view("signup");
 });
+
+Route::get('login',function (){
+    return view("login");
+});
+
+Route::get('muree',function (){
+    return view("muree");
+});
+
+Route::get('destinations',function (){
+    return view("destinations");
+});
+
+Route::get('hotel',function (){
+    return view("hotel");
+});
+
+Route::get('blogcategory',function (){
+    return view("blogcategory");
+});
+
+Route::get('useraccount',function (){
+    return view("useraccount");
+});
+
+Route::get('accountcreated',function (){
+    return view("accountcreated");
+});
+
+Route::get('about',function (){
+    return view("about");
+});
+
+Route::get('contact',function (){
+    return view("contact");
+});
+
+Route::get('author',function (){
+    return view("author");
+});
+
+Route::get('hotellisting',function (){
+    return view("hotellisting");
+});

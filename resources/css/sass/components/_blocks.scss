@@ -1,0 +1,22 @@
+.blockscontainer{
+    width: 90%;
+    margin: 4rem  auto 2rem;
+    .blocks{
+        
+        .blocks__list{
+            display: flex;
+            justify-content: space-between;
+            .blocks__item{
+                .blocks__image{
+    
+                }
+                .blocks__title{
+                    margin: 0;
+                }
+                .blocks__ratings{
+    
+                }
+            }
+        }
+    }
+}

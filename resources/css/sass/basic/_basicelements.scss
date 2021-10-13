@@ -4,9 +4,11 @@ body{
 h1,h2,h3,h4,h5,h6{
     font-family: $primary-font;
     font-weight: 400;
+    margin: 0;
 }
 p,a,li{
     font-family: $secondary-font;
+    margin: 0;
 }
 .center{
     text-align: center;

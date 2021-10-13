@@ -1,0 +1,34 @@
+.dodontContainer{
+    width: 90%;
+    margin: 4rem auto;
+    .dodont{
+        .dodont__info{
+            padding: 0;
+            width: 50%;
+            margin: 0 auto 3rem;
+            .dodont__head{
+                text-align: center;
+            }
+            .dodont__para{
+                text-align: center;
+            }
+        }
+        .dodont__lists{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            .dodont__listlist{
+                list-style-type: none;
+                .dodont__listitem{
+                    display: grid;
+                    grid-template-columns: 10% 90%;
+                    .dodont__listitemicon{
+                        background-color: $secondary-color;
+                        padding: 10px;
+                        border-radius: 50%;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
