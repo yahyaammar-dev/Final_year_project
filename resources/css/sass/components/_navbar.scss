@@ -13,22 +13,6 @@
 }
 
 
-@include tab{
-    .navbar{
-        display: none;
-    }
-}
-@include phonexl{
-    .navbar{
-        display: none;
-    }
-}
-@include phone{
-    .navbar{
-        display: none;
-    }
-}
-
 
 .navbar--active{
     position: absolute;
@@ -44,5 +28,27 @@
                 color: white;
             }
         }
+    }
+}
+
+
+
+
+
+
+
+@include tab{
+    .navbar{
+        display: none;
+    }
+}
+@include phonexl{
+    .navbar{
+        display: none;
+    }
+}
+@include phone{
+    .navbar{
+        display: none;
     }
 }

@@ -1,0 +1,28 @@
+.block{
+    margin: 0 5px 10px;
+    position: relative;
+    .block__info{
+        .blocks__title, .blocks__range, .blocks__price, .blocks__category{
+            margin: 0;
+        }
+        .blocks__range, .blocks__price, .blocks__category{
+            display: none;
+        }
+    }
+    &:hover{
+        .block__info{
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+            padding: 1rem;
+            .blocks__range, .blocks__price, .blocks__category{
+                display: block;
+            }
+            .blocks__title, .blocks__range, .blocks__price, .blocks__category{
+                padding-bottom: 0.5rem;
+            }
+        }   
+    }
+}

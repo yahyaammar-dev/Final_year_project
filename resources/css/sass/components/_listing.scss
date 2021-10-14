@@ -10,6 +10,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @include phone{
+            justify-content: center;
+        }
+        @include phonexl{
+            justify-content: center;
+        }
     }
     .blockscontainer--singleblock{
         margin: 0 10px 10px;

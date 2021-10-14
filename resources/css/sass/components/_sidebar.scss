@@ -1,8 +1,74 @@
 .sidebarcontainer{
+    @include phone{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    @include phonexl{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    @include tab{
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+    }
     .sidebar{
         margin-right: 2rem;
-        .sidebar__main{
-            
+        @include tab{
+            .sidebar__closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+              }              
+        }
+        @include phone{
+            .sidebar__closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+              }              
+        }
+        @include tabxl{
+            .sidebar__closebtn {
+              display: none;
+              }              
+        }
+        @include desktop{
+            .sidebar__closebtn {
+              display: none;
+              }              
+        }
+        @include large{
+            .sidebar__closebtn {
+              display: none;
+              }              
         }
         .sidebar__listcont{
             .sidebar__title{
@@ -10,6 +76,34 @@
                 justify-content: space-between;
                 align-items: center;
             }
+            .sidebar__list{
+                padding: 0;
+                list-style: none;
+            }
         }
+    }
+}
+.sidebar__open{
+    border: none;
+    background-color: $primary-color;
+    color: white;
+    margin: 1rem;
+}
+
+@include desktop{
+    .sidebar__open{
+        display: none;
+    }
+}
+
+@include large{
+    .sidebar__open{
+        display: none;
+    }
+}
+
+@include tabxl{
+    .sidebar__open{
+        display: none;
     }
 }
