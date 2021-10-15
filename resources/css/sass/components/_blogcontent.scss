@@ -1,0 +1,11 @@
+.blogcontent__main{
+    width: 90%;
+    display: flex;
+    margin: 4rem auto 0;
+    .sidebarcontainer{
+        flex: 0 0 20%;
+    }
+    .blogcontent__article{
+        flex: 0 0 80%;
+    }
+}

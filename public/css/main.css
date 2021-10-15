@@ -844,4 +844,24 @@ p, a, li {
 .block:hover .block__info .blocks__title, .block:hover .block__info .blocks__range, .block:hover .block__info .blocks__price, .block:hover .block__info .blocks__category {
   padding-bottom: 0.5rem;
 }
+
+.blogcontent__main {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 4rem auto 0;
+}
+
+.blogcontent__main .sidebarcontainer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+}
+
+.blogcontent__main .blogcontent__article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+}
 /*# sourceMappingURL=main.css.map */

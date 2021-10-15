@@ -69,3 +69,11 @@ Route::get('hotellisting',function (){
 Route::get('destinationlisting',function (){
     return view("destinationlisting");
 });
+
+Route::get('bloglisting',function (){
+    return view("bloglisting");
+});
+
+Route::get('blogdetail',function (){
+    return view("blogdetail");
+});
