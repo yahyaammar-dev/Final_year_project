@@ -1,0 +1,15 @@
+.authorinfocontainer{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    .authorinfo{
+        width: 50%;
+        text-align: center;
+       .authorinfo__image{
+           width: 150px;
+           height: 150px;
+           border-radius: 50%;
+       } 
+    }
+}

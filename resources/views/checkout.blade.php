@@ -19,9 +19,7 @@
     
     <x-header />
     <x-banner />
-    <x-sidebar />
-    <x-breadcrumb />
-    <x-blogblocks />
+    <x-checkoutform />
     <x-footer />
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>

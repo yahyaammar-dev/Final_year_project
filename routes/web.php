@@ -97,3 +97,11 @@ Route::get('productdetail',function (){
 Route::get('productlisting',function (){
     return view("productlisting");
 });
+
+Route::get('addtocart',function (){
+    return view("addtocart");
+});
+
+Route::get('checkout',function (){
+    return view("checkout");
+});

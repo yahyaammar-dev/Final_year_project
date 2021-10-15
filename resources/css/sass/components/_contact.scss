@@ -1,0 +1,21 @@
+.contactcontainer{
+    width: 90%;
+    margin: auto;
+    .contact{
+        display: flex;
+        justify-content: space-between;
+    }
+    .contact__block{   
+        background: $primary-color-transparent;
+        padding: 4rem;
+        color: white;
+        .contact__info{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            .fas, .fab{
+                font-size: 50px;
+            }
+        }
+    }
+}

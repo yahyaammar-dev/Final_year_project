@@ -1,0 +1,20 @@
+.cartitemcontainer{
+    margin: 1rem 0;
+    .cartitem{
+        width: 60%;
+        position: relative;
+        margin: auto;
+        .cartitem__close{
+            position: absolute;
+            right: 0;
+            font-size: 30px;
+        }
+        .cartitem__content{
+            display: flex;
+            align-items: center;
+            .cartitem__info{
+                padding: 0 0 0 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.twocolcontainer{
+    margin: 4rem 0;
+    .twocol{
+        display: flex;
+        .twocol__single{
+            position: relative;
+            padding: 2rem;
+            min-height: 10rem;
+            background: url('../../images/signup-bg.jpg');
+        }
+    }
+}

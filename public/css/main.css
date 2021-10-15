@@ -900,4 +900,261 @@ p, a, li {
 .accountactivatedcontainer .accountactivated .accountactivated__para {
   padding: 0.5rem;
 }
+
+.aboutubcontinaer {
+  width: 80%;
+  margin: 4rem auto;
+}
+
+.aboutubcontinaer .aboutub {
+  text-align: center;
+}
+
+.aboutubcontinaer .aboutub .aboutub__head {
+  margin-bottom: 1rem;
+}
+
+.twocolcontainer {
+  margin: 4rem 0;
+}
+
+.twocolcontainer .twocol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.twocolcontainer .twocol .twocol__single {
+  position: relative;
+  padding: 2rem;
+  min-height: 10rem;
+  background: url("../../images/signup-bg.jpg");
+}
+
+.contactcontainer {
+  width: 90%;
+  margin: auto;
+}
+
+.contactcontainer .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactcontainer .contact__block {
+  background: rgba(0, 94, 47, 0.5);
+  padding: 4rem;
+  color: white;
+}
+
+.contactcontainer .contact__block .contact__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contactcontainer .contact__block .contact__info .fas, .contactcontainer .contact__block .contact__info .fab {
+  font-size: 50px;
+}
+
+.authorinfocontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.authorinfocontainer .authorinfo {
+  width: 50%;
+  text-align: center;
+}
+
+.authorinfocontainer .authorinfo .authorinfo__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.cartitemcontainer {
+  margin: 1rem 0;
+}
+
+.cartitemcontainer .cartitem {
+  width: 60%;
+  position: relative;
+  margin: auto;
+}
+
+.cartitemcontainer .cartitem .cartitem__close {
+  position: absolute;
+  right: 0;
+  font-size: 30px;
+}
+
+.cartitemcontainer .cartitem .cartitem__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cartitemcontainer .cartitem .cartitem__content .cartitem__info {
+  padding: 0 0 0 1rem;
+}
+
+.transport {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.checkoutformContainer {
+  height: 85vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkoutformContainer .checkoutform {
+  background-color: rgba(0, 94, 47, 0.5);
+  display: inline-block;
+  padding: 30px;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-column-gap: 10px;
+}
+
+.checkoutformContainer .checkoutform .checkoutform__label {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.checkoutformContainer .checkoutform .checkoutform__input {
+  border: none;
+  outline: none;
+  background: #F6F6F6;
+  padding: 7px 0px 7px 35px;
+  border-radius: 5px;
+}
+
+.checkoutformContainer .checkoutform .checkoutform__icon {
+  color: #005e2f;
+  position: absolute;
+  padding: 10px 0 5px 10px;
+}
+
+.checkoutformContainer .checkoutform .submit {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-row: 5;
+      grid-row-start: 5;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .checkoutformcontainer .checkoutform {
+    display: block;
+  }
+  .checkoutformcontainer .checkoutform .checkoutform__label {
+    display: none;
+  }
+  .checkoutformcontainer .checkoutform .checkoutform__input {
+    border: none;
+    outline: none;
+    background: #F6F6F6;
+    padding: 7px 0px 7px 35px;
+    border-radius: 5px;
+  }
+  .checkoutformcontainer .checkoutform .checkoutform__icon {
+    color: #005e2f;
+    position: absolute;
+    padding: 5.5px 0 5px 10px;
+  }
+  .checkoutformcontainer .checkoutform .submit {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 5;
+        grid-row-start: 5;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 600px) {
+  .checkoutformcontainer .checkoutform {
+    display: block;
+  }
+  .checkoutformcontainer .checkoutform .checkoutform__label {
+    display: none;
+  }
+  .checkoutformcontainer .checkoutform .checkoutform__input {
+    border: none;
+    outline: none;
+    background: #F6F6F6;
+    padding: 7px 0px 7px 35px;
+    border-radius: 5px;
+  }
+  .checkoutformcontainer .checkoutform .checkoutform__icon {
+    color: #005e2f;
+    position: absolute;
+    padding: 5.5px 0 5px 10px;
+  }
+  .checkoutformcontainer .checkoutform .submit {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 5;
+        grid-row-start: 5;
+  }
+}
+
+@media (max-width: 300px) {
+  .checkoutformcontainer .checkoutform {
+    display: block;
+  }
+  .checkoutformcontainer .checkoutform .checkoutform__label {
+    display: none;
+  }
+  .checkoutformcontainer .checkoutform .checkoutform__input {
+    border: none;
+    outline: none;
+    background: #F6F6F6;
+    padding: 7px 0px 7px 35px;
+    border-radius: 5px;
+  }
+  .checkoutformcontainer .checkoutform .checkoutform__icon {
+    color: #005e2f;
+    position: absolute;
+    padding: 5.5px 0 5px 10px;
+  }
+  .checkoutformcontainer .checkoutform .submit {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 5;
+        grid-row-start: 5;
+  }
+}
 /*# sourceMappingURL=main.css.map */
