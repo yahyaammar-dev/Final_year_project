@@ -77,3 +77,23 @@ Route::get('bloglisting',function (){
 Route::get('blogdetail',function (){
     return view("blogdetail");
 });
+
+Route::get('blogcategorylisting',function (){
+    return view("blogcategorylisting");
+});
+
+Route::get('freelancerdetail',function (){
+    return view("freelancerdetail");
+});
+
+Route::get('freelancerlisting',function (){
+    return view("freelancerlisting");
+});
+
+Route::get('productdetail',function (){
+    return view("productdetail");
+});
+
+Route::get('productlisting',function (){
+    return view("productlisting");
+});

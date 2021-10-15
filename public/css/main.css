@@ -864,4 +864,40 @@ p, a, li {
       -ms-flex: 0 0 80%;
           flex: 0 0 80%;
 }
+
+.userinfocontainer {
+  width: 40%;
+  text-align: center;
+  margin: 4rem auto;
+}
+
+.userinfocontainer .userinfo .userinfo__ele {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  padding: 1rem;
+  background: rgba(0, 94, 47, 0.5);
+  color: #FFF;
+}
+
+.accountactivatedcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 4rem 0;
+}
+
+.accountactivatedcontainer .accountactivated {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+}
+
+.accountactivatedcontainer .accountactivated .accountactivated__para {
+  padding: 0.5rem;
+}
 /*# sourceMappingURL=main.css.map */

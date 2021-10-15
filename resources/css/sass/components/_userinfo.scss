@@ -1,0 +1,14 @@
+.userinfocontainer{
+    width: 40%;
+    text-align: center;
+    margin: 4rem auto;
+    .userinfo{
+        .userinfo__ele{
+            display: grid;
+            grid-template-columns: auto auto;
+            padding: 1rem;
+            background: $primary-color-transparent;
+            color: $white-color;
+        }
+    }
+}
