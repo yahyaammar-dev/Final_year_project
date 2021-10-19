@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-<h1>Yahya Ammar</h1>
+<h1 style="text-align:center;">Yahya Ammar</h1>
 
 ## About Laravel
 
