@@ -1,9 +1,10 @@
 <div class="formContainer">
-    <form action="" method="" class="form">
+    <form action="" method="POST" class="form">
+        @csrf
         <label class="form__label item" for="name">Name</label>
         <div class="item">
             <i class="fa fa-user form__icon"></i>
-            <input class="form__input" type="text" placeholder="Enter Full Name"><br><br>
+            <input class="form__input" name="name" type="text" placeholder="Enter Full Name"><br><br>
         </div>
         <label class="form__label item" for="name">Email</label>
         <div class="item">

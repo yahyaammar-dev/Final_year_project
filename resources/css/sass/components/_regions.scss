@@ -1,0 +1,43 @@
+/* This section is imported from unboxing pakistan blog and does not use BEM model */
+
+.list{
+
+    .title h1{
+        font-size: 20px;
+        font-weight: 700;
+        padding-top: 100px;
+        padding-bottom: 25px;
+        font-family: Poppins,Arial, Helvetica, sans-serif;
+    }
+
+    .map-slider{
+        margin-left: -30px
+    }
+
+    .area {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        .text {
+            font-family: $secondary-font;
+            margin-top: 20px;
+            font-size: 14px;
+            margin-top:15px;
+            color: $secondary-color;
+        }
+        .arrow{
+            padding: 6px 0;
+        }
+    }
+
+
+}
+   
+    .slider-img{
+        height:  100%;
+        text-align:  center;
+        padding:  2rem;
+        margin: auto;
+        justify-content: space-between;
+    }

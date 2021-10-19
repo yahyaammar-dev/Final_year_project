@@ -1,0 +1,11 @@
+.hero{
+    display: flex;
+    min-height: 50vh;
+    justify-content: center;
+    background: url("../images/signup-bg.jpg");
+    align-items: center;
+    .hero__content{
+        display: inline-block;
+        text-align: center;
+    }
+}

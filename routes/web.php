@@ -1,20 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Userin;
+use App\Http\Controllers\Login;
+use App\Http\Controllers\Pakistanc;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 
@@ -105,3 +98,45 @@ Route::get('addtocart',function (){
 Route::get('checkout',function (){
     return view("checkout");
 });
+
+Route::get('contactdir',function (){
+    return view("contactdir");
+});
+
+Route::get('favorite',function (){
+    return view("favorite");
+});
+
+Route::get('visas',function (){
+    return view("visas");
+});
+
+Route::get('addcategory',function (){
+    return view("addcategory");
+});
+
+Route::get('adddestination',function (){
+    return view("adddestination");
+});
+
+Route::get('addfreelancer',function (){
+    return view("addfreelancer");
+});
+
+Route::get('addhotel',function (){
+    return view("addhotel");
+});
+
+Route::get('addproduct',function (){
+    return view("addproduct");
+});
+
+Route::get('writeblog',function (){
+    return view("writeblog");
+});
+
+Route::post('signup',[Userin::class,'insertUser']);
+
+Route::post('login', [Login::class,'loginuser']);
+
+Route::get('pakistan', [Pakistanc::class,'returnhtml']);

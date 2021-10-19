@@ -6,7 +6,7 @@
                 <ul class="footer__list">
                     <li class="footer__listitem">About</li>
                     <li class="footer__listitem">Contact</li>
-                    <li class="footer__listitem">Visas</li>
+                    <li class="footer__listitem"><a href="http://localhost:8001/visas">Visas</a></li>
                 </ul>  
             </div>
             <div class="footer__section">

@@ -1,0 +1,13 @@
+.visainfo{
+    display: flex;
+    .visasidebar{
+        flex: 0 0 25%;
+        justify-content: center;
+        .visasidebar__list{
+            text-align: center;
+        }
+    }
+    .visainfo__main{
+        flex: 0 0 70%;
+    }
+}
