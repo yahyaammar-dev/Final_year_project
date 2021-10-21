@@ -21,9 +21,7 @@
     <x-videos />
     <x-images />
     <x-dodont />
-    <x-blocks />
-    <x-blocks />
-    <x-blocks />
+    <!-- Three time blocks here -->
     <x-footer />
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>

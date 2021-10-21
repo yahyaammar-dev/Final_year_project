@@ -2,7 +2,7 @@
     <div class="videos">
         <div class="videos__main">
             <div class="videos__playing">
-                <img src="{{URL('images/videoplaying.jpg')}}" alt="" class="videos__play">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_1KVl5bZF30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="videos__description">
                 <h1 class="videos__title">Murree</h1>
@@ -19,25 +19,13 @@
                 <i class="fa fa-angle-left videos__arrow" aria-hidden="true"></i>
             </div>
             <div class="videos__item videos__active">
-                <img src="{{URL('images/videocover.png')}}" alt="" class="videos__thumbnail">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_1KVl5bZF30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="videos__thumbnail" allowfullscreen></iframe>
             </div>
-            <div class="videos__item">
-                <img src="{{URL('images/videocover.png')}}" alt="" class="videos__thumbnail">
+            <div class="videos__item videos__active">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_1KVl5bZF30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="videos__thumbnail" allowfullscreen></iframe>
             </div>
-            <div class="videos__item">
-                <img src="{{URL('images/videocover.png')}}" alt="" class="videos__thumbnail">
-            </div>
-            <div class="videos__item">
-                <img src="{{URL('images/videocover.png')}}" alt="" class="videos__thumbnail">
-            </div>
-            <div class="videos__item">
-                <img src="{{URL('images/videocover.png')}}" alt="" class="videos__thumbnail">
-            </div>
-            <div class="videos__item">
-                <img src="{{URL('images/videocover.png')}}" alt="" class="videos__thumbnail">
-            </div>
-            <div class="videos__item">
-                <img src="{{URL('images/videocover.png')}}" alt="" class="videos__thumbnail">
+            <div class="videos__item videos__active">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_1KVl5bZF30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="videos__thumbnail" allowfullscreen></iframe>
             </div>
             <div class="videos__right">
                 <i class="fa fa-angle-right videos__arrow" aria-hidden="true"></i>

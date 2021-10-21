@@ -11,7 +11,7 @@
 <body>
     
     <x-header />
-    <x-form />
+    <x-adddestinationform />
     <x-footer />
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>

@@ -30,6 +30,11 @@
                     success: function(html){
                         $(".visainfo__ajaxblock").empty();
                         $(".visainfo__ajaxblock").append(html);
+
+                       
+
+
+
                     }
                 });
             });

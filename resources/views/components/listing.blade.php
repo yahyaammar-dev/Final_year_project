@@ -1,14 +1,12 @@
 <div class="listing__main">
     <x-sidebar />
     <div class="listing__content">
-        <x-block />
-        <x-block />
-        <x-block />
-        <x-block />
-        <x-block />
-        <x-block />
-        <x-block />
-        <x-block />
+
+        @foreach($dest as $item)
+        <x-block :dest="$item"/>
+        @endforeach
+
     </div>
 </div>
 <button type="submit" class="submit submit--center">Register</button>
+

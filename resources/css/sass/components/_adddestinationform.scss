@@ -1,0 +1,105 @@
+.adddestinationformContainer{
+    background: url("../images/signup-bg.jpg");
+    height: 85vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .adddestinationform{
+        background-color: $primary-color-transparent;
+        display: inline-block;
+        padding: 30px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 10px;
+        .adddestinationform__label{
+            color: white;
+            font-family: $secondary-font;
+        }
+        .adddestinationform__input{
+            border: none;
+            outline: none;
+            background: $lightgray-color;
+            padding: 7px 0px 7px 35px;
+            border-radius: 5px;
+        }
+        .adddestinationform__icon{
+            color: $primary-color;
+            position: absolute;
+            padding: 5.5px 0 5px 10px;
+        }
+    }
+}
+
+
+@include tab{
+    .adddestinationformContainer{
+        .adddestinationform{
+            display: block;
+            .adddestinationform__label{
+                display: none;
+            }
+            .adddestinationform__input{
+                border: none;
+                outline: none;
+                background: $lightgray-color;
+                padding: 7px 0px 7px 35px;
+                border-radius: 5px;
+            }
+            .adddestinationform__icon{
+                color: $primary-color;
+                position: absolute;
+                padding: 5.5px 0 5px 10px;
+            }
+        }
+    }    
+}
+
+@include phonexl{
+    .adddestinationformContainer{
+        .adddestinationform{
+            display: block;
+            .adddestinationform__label{
+                display: none;
+            }
+            .adddestinationform__input{
+                border: none;
+                outline: none;
+                background: $lightgray-color;
+                padding: 7px 0px 7px 35px;
+                border-radius: 5px;
+            }
+            .adddestinationform__icon{
+                color: $primary-color;
+                position: absolute;
+                padding: 5.5px 0 5px 10px;
+            }
+
+        }
+    }    
+}
+@include phone{
+    .adddestinationformContainer{
+        .adddestinationform{
+            display: block;
+            .adddestinationform__label{
+                display: none;
+            }
+            .adddestinationform__input{
+                border: none;
+                outline: none;
+                background: $lightgray-color;
+                padding: 7px 0px 7px 35px;
+                border-radius: 5px;
+            }
+            .adddestinationform__icon{
+                color: $primary-color;
+                position: absolute;
+                padding: 5.5px 0 5px 10px;
+            }
+        }
+    }    
+}

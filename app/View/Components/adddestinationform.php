@@ -4,19 +4,16 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class listing extends Component
+class adddestinationform extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-
-    public $dest;
-
-    public function __construct($dest)
+    public function __construct()
     {
-        $this->dest = $dest;
+        //
     }
 
     /**
@@ -26,6 +23,6 @@ class listing extends Component
      */
     public function render()
     {
-        return view('components.listing');
+        return view('components.adddestinationform');
     }
 }

@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Userin;
 use App\Http\Controllers\Login;
 use App\Http\Controllers\Pakistanc;
+use App\Http\Controllers\Adddestination;
+use App\Http\Controllers\Listdestinations;
+use App\Http\Controllers\filterdestination;
 
 
 Route::get('/', function () {
@@ -57,10 +60,6 @@ Route::get('author',function (){
 
 Route::get('hotellisting',function (){
     return view("hotellisting");
-});
-
-Route::get('destinationlisting',function (){
-    return view("destinationlisting");
 });
 
 Route::get('bloglisting',function (){
@@ -140,3 +139,9 @@ Route::post('signup',[Userin::class,'insertUser']);
 Route::post('login', [Login::class,'loginuser']);
 
 Route::get('pakistan', [Pakistanc::class,'returnhtml']);
+
+Route::post('adddestination',[Adddestination::class,'adddestination']);
+
+Route::get('destinationlisting', [Listdestinations::class,'Listdestinations']);
+
+Route::get('filterdestination', [filterdestination::class,'Listdestinations']);

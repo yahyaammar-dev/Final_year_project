@@ -22,7 +22,7 @@
         }
         .videos__secondary{
             display: grid;
-            grid-template-columns: repeat(9, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             grid-column-gap: 10px;
             .videos__left{
                 display: flex;
@@ -40,7 +40,8 @@
             .videos__item{
                 position:relative;
                 .videos__thumbnail{
-                    max-width: 150px;
+                    max-width: 300px;
+                    height: 163px;
                 }
             }
             .videos__item:after {

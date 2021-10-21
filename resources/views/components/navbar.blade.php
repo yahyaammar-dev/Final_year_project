@@ -1,6 +1,6 @@
 <div class="navbar">
     <ul class="navbar__list">
-        <a  class="navbar__listlink" href="#"><li class="navbar__listitem">Destinations</li></a>
+        <a  class="navbar__listlink" href="http://localhost:8001/destinationlisting"><li class="navbar__listitem">Destinations</li></a>
         <a  class="navbar__listlink" href="#"><li class="navbar__listitem">Product</li></a>
         <a  class="navbar__listlink" href="#"><li class="navbar__listitem">Blog</li></a>
         <a  class="navbar__listlink" href="http://localhost:8000/signup"><li class="navbar__listitem">Signup</li></a>

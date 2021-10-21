@@ -21,8 +21,49 @@
     <x-header />
     <x-banner />
     <button class="sidebar__open" onclick="openNav()">☰</button> 
-    <x-listing />
+    <x-listing :dest="$dest"/>
     <x-footer />
+
+
+    
+    <script>
+        $(document).ready(function(){
+            $(".sidebar__listitem").click(function(){
+                var $this = $(this);
+                $.ajax({
+                    url: "http://localhost:8001/filterdestination",
+                    success: function($dest){
+                        let len = Object.entries($dest).length
+                        $(".listing__content").empty();
+                        $.each($dest, function(){
+                            var name= this['name'];
+                            var price= this['price'];
+                            var type= this['type'];
+                        
+
+                            $(".listing__content").append(`<div class="block">
+                                <img src="{{URL('images/product.jpg')}}" alt="" class="blocks__image">
+                                <div class="block__info">    
+                                    <p class="blocks__title">${name}</p>
+                                    <p class="blocks__price">${price} pkr</p>
+                                    <p class="blocks__category">${type}</p>
+                                    <pre class="blocks__ratings"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i></pre>
+                                </div>
+                            </div>
+`);
+                            
+
+                        
+                        });
+
+
+                    }
+                });
+
+            })
+        });
+    </script>
+
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
 </body>
