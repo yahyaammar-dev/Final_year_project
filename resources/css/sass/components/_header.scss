@@ -5,13 +5,27 @@
     width: 90%;
     margin: 0 auto;
     padding: 1rem 0;
+    position: relative;
     .header__icons{
-        display: flex;
-        align-items: center;
-        .search__icon{
+        .header__serachicon{
             font-size: 26px;
             padding: 10px;
             color: $primary-color;
+            cursor: pointer;
+        }
+        .header__search{
+            position: absolute;
+            right: 10px;
+            .header__searchfieldn{
+                display: none;
+            }
+            .header__searchfieldy{
+                display: block;
+            }
+            .header__seachresult{
+                position: absolute;
+                top: 5vh;
+            }
         }
     }
 }

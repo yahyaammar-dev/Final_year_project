@@ -21,11 +21,9 @@
 
     <x-header />
     <x-hero />
-    <x-regions />
+    <!--Regions are optional -->
     <x-gallery />
-    <x-blocks />
-    <x-blocks />
-    <x-blocks />
+    <!--Three Blocks -->
     <x-instatravelers />
     <x-footer />
 

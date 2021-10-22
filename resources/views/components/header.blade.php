@@ -3,7 +3,14 @@
     <x-logo />
     <x-navbar />
     <div class="header__icons">
-        <i class="fas fa-search search__icon"></i> 
-        <img src="{{URL('images/map2_33.png')}}" alt="pakistan-map">
+        <i class="fas fa-search header__serachicon"></i> 
+        <div class="header__search ">
+            <!-- <input type="text" class="header__searchfield header__searchfieldn"> -->
+            <x-search />
+        </div>
     </div>
 </div>
+
+
+
+<script src="{{URL::asset('js/searchbox.js')}}"></script>

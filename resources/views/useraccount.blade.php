@@ -12,8 +12,7 @@
     
     <x-header />
     <x-userinfo />
-    <x-blocks />
-    <x-blocks />
+    <!-- Two blocks -->
     <x-footer />
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>

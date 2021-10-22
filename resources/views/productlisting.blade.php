@@ -21,7 +21,7 @@
     <x-header />
     <x-banner />
     <button class="sidebar__open" onclick="openNav()">☰</button> 
-    <x-listing />
+ <!-- Listing -->
     <x-footer />
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>

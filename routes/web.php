@@ -7,6 +7,7 @@ use App\Http\Controllers\Pakistanc;
 use App\Http\Controllers\Adddestination;
 use App\Http\Controllers\Listdestinations;
 use App\Http\Controllers\filterdestination;
+use App\Http\Controllers\SearchController;
 
 
 Route::get('/', function () {
@@ -145,3 +146,7 @@ Route::post('adddestination',[Adddestination::class,'adddestination']);
 Route::get('destinationlisting', [Listdestinations::class,'Listdestinations']);
 
 Route::get('filterdestination', [filterdestination::class,'Listdestinations']);
+
+
+
+Route::get('/search',[SearchController::class,'search']);

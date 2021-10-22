@@ -5,7 +5,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Bebas Neue", cursive;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 400;
   margin: 0;
 }
@@ -17,6 +17,15 @@ p, a, li {
 
 .center {
   text-align: center;
+}
+
+tbody {
+  background-color: white;
+}
+
+.nintycenter {
+  width: 90%;
+  margin: auto;
 }
 
 .header {
@@ -32,21 +41,32 @@ p, a, li {
   width: 90%;
   margin: 0 auto;
   padding: 1rem 0;
+  position: relative;
 }
 
-.header .header__icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header .header__icons .search__icon {
+.header .header__icons .header__serachicon {
   font-size: 26px;
   padding: 10px;
   color: #005e2f;
+  cursor: pointer;
+}
+
+.header .header__icons .header__search {
+  position: absolute;
+  right: 10px;
+}
+
+.header .header__icons .header__search .header__searchfieldn {
+  display: none;
+}
+
+.header .header__icons .header__search .header__searchfieldy {
+  display: block;
+}
+
+.header .header__icons .header__search .header__seachresult {
+  position: absolute;
+  top: 5vh;
 }
 
 .navbar .navbar__list {
@@ -100,6 +120,9 @@ p, a, li {
 
 .hamburger {
   cursor: pointer;
+  font-size: 26px;
+  padding: 10px;
+  color: #005e2f;
 }
 
 @media (min-width: 1201px) and (max-width: 1440px) {
@@ -1200,7 +1223,7 @@ p, a, li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 50vh;
+  min-height: 70vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1213,6 +1236,12 @@ p, a, li {
 .hero .hero__content {
   display: inline-block;
   text-align: center;
+  color: white;
+}
+
+.hero .hero__content .hero__heading {
+  font-weight: 800;
+  padding-bottom: 2rem;
 }
 
 /* This section is imported from unboxing pakistan blog and does not use BEM model */
@@ -1266,7 +1295,6 @@ p, a, li {
           justify-content: space-between;
 }
 
-/* This section is imported from unboxing pakistan and does not contain BEM architecuture */
 .gall-h1 {
   font-size: 20px;
   font-weight: 700;
@@ -1287,9 +1315,16 @@ p, a, li {
 
 .gallery {
   height: 525px;
+  margin-bottom: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.gallery .cols-8 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 64%;
+          flex: 0 0 64%;
 }
 
 .gallery .row {
@@ -1342,6 +1377,15 @@ p, a, li {
   color: white;
 }
 
+@media (min-width: 601px) and (max-width: 900px) {
+  .gallery .cols-8 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 .gallery .main-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1349,12 +1393,34 @@ p, a, li {
   height: 100%;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  width: 90%;
+  margin: auto;
 }
 
 .gallery .first {
   background: url("../images/1.jpg");
   margin: 0 35px 0 0;
   border-radius: 5px;
+  min-height: 200px;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .gallery .first {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 300px) {
+  .gallery .first {
+    max-height: 200px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .gallery .first .content {
@@ -1376,6 +1442,16 @@ p, a, li {
   position: relative;
   margin: 0 0 35px 0;
   border-radius: 5px;
+  min-height: 200px;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .gallery .second {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .gallery .second .content {
@@ -1398,6 +1474,19 @@ p, a, li {
   width: 48%;
   margin-right: 35px;
   border-radius: 5px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 47.5%;
+          flex: 0 0 47.5%;
+  min-height: 200px;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .gallery .third {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .gallery .third .content {
@@ -1410,6 +1499,19 @@ p, a, li {
   background: url("../images/4.jpg");
   width: 48%;
   border-radius: 5px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 47.5%;
+          flex: 0 0 47.5%;
+  min-height: 200px;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .gallery .fourth {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .gallery .fourth .content {
@@ -1422,8 +1524,8 @@ p, a, li {
   .gall-h1 {
     padding-top: 0;
   }
-  .home .layoutBody .contentBlockWrapper {
-    margin-top: 40rem;
+  .gallery {
+    margin-bottom: 55rem;
   }
   .gallery .container {
     width: 100%;
@@ -1441,7 +1543,7 @@ p, a, li {
   }
   .gallery .main-row .first {
     width: 100%;
-    min-height: 250px;
+    min-height: 200px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1495,6 +1597,7 @@ p, a, li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 4rem;
 }
 
 .visasidebar .visasidebar__list {
