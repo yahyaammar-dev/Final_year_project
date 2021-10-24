@@ -293,6 +293,11 @@ tbody {
   margin: 0 auto 4rem;
 }
 
+.submit--fullwidth {
+  width: 100%;
+  margin-top: 1rem;
+}
+
 .footercontainer {
   background-color: #005e2f;
   color: #F6F6F6;
@@ -317,9 +322,17 @@ tbody {
   margin: 0;
 }
 
+.footercontainer .footer .footersectionone .footer__section .footer__list .footer__listitem .footer__listitemlink {
+  color: #FFF;
+  text-decoration: none;
+}
+
 .footercontainer .footer .footersectionone .footer__section .footer__secheading {
-  color: #001a0d;
+  color: #FFF;
   padding-bottom: 1rem;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
@@ -357,7 +370,11 @@ tbody {
 }
 
 .footercontainer .footer .footersectiontwo .footerinfo .footerinfo__heading {
-  color: #001a0d;
+  color: #FFF;
+  padding-bottom: 1rem;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
   margin-top: 4rem;
   padding-bottom: 1rem;
 }
@@ -460,13 +477,13 @@ tbody {
   background: #F6F6F6;
   padding: 9px 0px 9px 35px;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
 }
 
 .newsletter .newsletter__icon {
   color: #005e2f;
   position: absolute;
-  padding: 8px 0 5px 10px;
+  padding: 13px 0 5px 10px;
 }
 
 .newsletter .submit {
@@ -620,16 +637,34 @@ tbody {
 
 .blockscontainer {
   width: 90%;
-  margin: 4rem  auto 2rem;
+  margin: 0  auto 2rem;
 }
 
 .blockscontainer .blocks .blocks__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 301px) and (max-width: 600px) {
+  .blockscontainer .blocks .blocks__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 300px) {
+  .blockscontainer .blocks .blocks__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .blockscontainer .blocks .blocks__list .blocks__item .blocks__title {
@@ -1314,7 +1349,7 @@ tbody {
 }
 
 .gallery {
-  height: 525px;
+  height: 100%;
   margin-bottom: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1325,6 +1360,15 @@ tbody {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 64%;
           flex: 0 0 64%;
+}
+
+@media (max-width: 767px) {
+  .gallery .cols-8 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .gallery .row {
@@ -1377,15 +1421,6 @@ tbody {
   color: white;
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
-  .gallery .cols-8 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
 .gallery .main-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1404,7 +1439,7 @@ tbody {
   min-height: 200px;
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
+@media (max-width: 767px) {
   .gallery .first {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -1445,7 +1480,7 @@ tbody {
   min-height: 200px;
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
+@media (max-width: 767px) {
   .gallery .second {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -1480,7 +1515,7 @@ tbody {
   min-height: 200px;
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
+@media (max-width: 767px) {
   .gallery .third {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -1505,7 +1540,7 @@ tbody {
   min-height: 200px;
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
+@media (max-width: 767px) {
   .gallery .fourth {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -1598,6 +1633,36 @@ tbody {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 4rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 300px) {
+  .instatravelers {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 600px) {
+  .instatravelers {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 300px) {
+  .instatravelers .instatravelers__item {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 600px) {
+  .instatravelers .instatravelers__item {
+    padding-bottom: 1rem;
+  }
 }
 
 .visasidebar .visasidebar__list {

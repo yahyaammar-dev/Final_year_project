@@ -5,8 +5,7 @@
 <div class="gallery">
     <div class="row main-row">
         <div class="col-sm-4 first">
-            <div class="content">
-                <p>Americas</p>
+            <div class="content">   
                 <h1>Boston</h1>
             </div>
         </div>
@@ -14,7 +13,6 @@
             <div class="row col8-1">
                 <div class="col second">
                     <div class="content">
-                        <p>Americas</p>
                         <h1>Boston</h1>
                     </div>
                 </div>
@@ -22,13 +20,11 @@
             <div class="row col8-2">
                 <div class="col-sm-6 third">
                     <div class="content">
-                        <p>Americas</p>
                         <h1>Boston</h1>
                     </div>
                 </div>
                 <div class="col-sm-6 fourth">
                     <div class="content">
-                        <p>Americas</p>
                         <h1>Boston</h1>
                     </div>
                 </div>

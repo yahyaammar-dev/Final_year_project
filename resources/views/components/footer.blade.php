@@ -6,7 +6,7 @@
                 <ul class="footer__list">
                     <li class="footer__listitem">About</li>
                     <li class="footer__listitem">Contact</li>
-                    <li class="footer__listitem"><a href="http://localhost:8001/visas">Visas</a></li>
+                    <li class="footer__listitem"><a href="http://localhost:8001/visas" class="footer__listitemlink">Visas</a></li>
                 </ul>  
             </div>
             <div class="footer__section">
@@ -51,7 +51,9 @@
                 <p class="footerinfo__paragrapgh">Our mission is to promote tourism in Pakistan and make it most desireable location for vacations all around the globe.</p>
             </div>
             <div class="footersectiontwo__right">
-                <x-logo />
+                <div class="logo">
+                    <a href="http://localhost:8001/"><img class="logo__image" src="{{URL('images/logo-white.png')}}"></a>
+                </div>
             </div>
         </div>
     </div>

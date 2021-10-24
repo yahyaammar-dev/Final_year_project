@@ -8,11 +8,10 @@ use App\Http\Controllers\Adddestination;
 use App\Http\Controllers\Listdestinations;
 use App\Http\Controllers\filterdestination;
 use App\Http\Controllers\SearchController;
-
-
-Route::get('/', function () {
-    return view('home');
-});
+use App\Http\Controllers\Homeitems;
+use App\Http\Controllers\Newsletter;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\Useraccount;
 
 
 Route::get('signup',function (){
@@ -39,9 +38,6 @@ Route::get('blogcategory',function (){
     return view("blogcategory");
 });
 
-Route::get('useraccount',function (){
-    return view("useraccount");
-});
 
 Route::get('accountcreated',function (){
     return view("accountcreated");
@@ -147,6 +143,12 @@ Route::get('destinationlisting', [Listdestinations::class,'Listdestinations']);
 
 Route::get('filterdestination', [filterdestination::class,'Listdestinations']);
 
-
+Route::get('/', [Homeitems::class,'Listitems']);
 
 Route::get('/search',[SearchController::class,'search']);
+
+Route::post('/',[Newsletter::class,'register']);
+
+Route::get('send-mail', [MailController::class,'sendMail']);
+
+Route::get('useraccount', [Useraccount::class,'Showaccount'] );

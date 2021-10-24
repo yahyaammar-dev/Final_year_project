@@ -16,12 +16,17 @@
 }
 
 .gallery{
-    height: 525px;
+    height: 100%;
     margin-bottom: 4rem;
     display: flex;
     
     .cols-8{
         flex: 0 0 64%;
+        
+        @include custom{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     }
     .row{
         padding: 0;
@@ -66,12 +71,7 @@
         font-family: Maitree,Georgia, serif;
         color: white;
     }
-    @include tab{
-        .cols-8{
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-    }
+
   
     .main-row{
         display: flex;
@@ -86,11 +86,11 @@
         border-radius: 5px;
         min-height: 200px;
 
-        @include tab{
+        @include custom{
             flex: 0 0 100%;
             max-width: 100%;
         }
-     
+
         @include phone{
             max-height: 200px;
             flex: 0 0 100%;
@@ -116,7 +116,7 @@
         border-radius: 5px;
         min-height: 200px;
 
-        @include tab{
+        @include custom{
             flex: 0 0 100%;
             max-width: 100%;
         }
@@ -140,7 +140,8 @@
         flex: 0 0 47.5%;
         min-height: 200px;
 
-        @include tab{
+
+        @include custom{
             flex: 0 0 100%;
             max-width: 100%;
         }
@@ -158,11 +159,10 @@
         flex: 0 0 47.5%;
         min-height: 200px;
 
-        @include tab{
+        @include custom{
             flex: 0 0 100%;
             max-width: 100%;
         }
-
         
         .content{
             padding: 30px;

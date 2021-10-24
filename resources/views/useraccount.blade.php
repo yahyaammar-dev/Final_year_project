@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="{{URL::asset('css/vendor/FontAwesome/Fontawesomecss/all.css')}}">
 </head>
 <body>
-    
+
     <x-header />
-    <x-userinfo />
+    <x-userinfo :user="$user" />
     <!-- Two blocks -->
     <x-footer />
 

@@ -4,4 +4,21 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 4rem;
+    flex-wrap: wrap;
+    @include phone{
+        justify-content: center;
+    }
+    @include phonexl{
+        justify-content: center;
+    }
+    @include phone{
+        .instatravelers__item{
+            padding-bottom: 1rem;
+        }
+    }
+    @include phonexl{
+        .instatravelers__item{
+            padding-bottom: 1rem;
+        }
+    }
 }

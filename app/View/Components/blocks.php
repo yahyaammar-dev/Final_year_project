@@ -11,9 +11,11 @@ class blocks extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $dest;
+
+    public function __construct($dest)
     {
-        //
+        $this->dest = $dest;
     }
 
     /**

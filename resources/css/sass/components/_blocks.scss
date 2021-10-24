@@ -1,11 +1,18 @@
 .blockscontainer{
     width: 90%;
-    margin: 4rem  auto 2rem;
+    margin: 0  auto 2rem;
     .blocks{
         
         .blocks__list{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
+            @include phonexl{
+                justify-content: center;
+            }
+            @include phone{
+                justify-content: center;
+            }
             .blocks__item{
                 .blocks__image{
     

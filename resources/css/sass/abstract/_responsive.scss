@@ -5,6 +5,11 @@ $tab: 900px;
 $phonexl: 600px;
 $phone: 300px;
 
+@mixin custom {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
 
 @mixin large {
   @media (min-width: #{$desktop+1}) and (max-width: #{$large}) {

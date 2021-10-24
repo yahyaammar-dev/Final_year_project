@@ -23,7 +23,19 @@
     <x-hero />
     <!--Regions are optional -->
     <x-gallery />
-    <!--Three Blocks -->
+
+    <!-- Destinations, products and freelancers blocks -->
+    <?php
+        if(count($dest)>0){
+            $destination = $dest[0];
+            $freelancer = $dest[1];
+            $product = $dest[2];
+        }
+    ?>
+    <x-blocks :dest="$destination"/>
+    <x-blocks :dest="$product"/>
+    <x-blocks :dest="$freelancer"/>
+    
     <x-instatravelers />
     <x-footer />
 
