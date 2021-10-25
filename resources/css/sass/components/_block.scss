@@ -2,10 +2,10 @@
     margin: 0 5px 10px;
     position: relative;
     .block__info{
-        .blocks__title, .blocks__range, .blocks__price, .blocks__category{
+        .blocks__title, .blocks__range, .blocks__price, .blocks__category, .blocks__region, .blocks__weather{
             margin: 0;
         }
-        .blocks__range, .blocks__price, .blocks__category{
+        .blocks__range, .blocks__price, .blocks__category, .blocks__region, .blocks__weather{
             display: none;
         }
     }
@@ -17,7 +17,7 @@
             bottom: 0;
             text-align: center;
             padding: 1rem;
-            .blocks__range, .blocks__price, .blocks__category{
+            .blocks__range, .blocks__price, .blocks__category, .blocks__region, .blocks__weather{
                 display: block;
             }
             .blocks__title, .blocks__range, .blocks__price, .blocks__category{

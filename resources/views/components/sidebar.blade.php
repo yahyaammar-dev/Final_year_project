@@ -31,10 +31,22 @@
                 <i class="fas fa-chevron-down sidebar__regiondrop"></i>
             </div>
             <ul class="sidebar__list sidebar__regioncontent">
-                <li class="sidebar__listitem">Punjab</li>
-                <li class="sidebar__listitem">Sindh</li>
-                <li class="sidebar__listitem">Blouchistan</li>
-                <li class="sidebar__listitem">KPK</li>
+                <li class="sidebar__listitem">
+                    <p class="sidebar__listtext">Punjab</p>
+                    <input type="checkbox" class="sidebar__listradio" name="pujab" value="punjab">
+                </li>
+                <li class="sidebar__listitem">
+                    <p class="sidebar__listtext">Sindh</p>
+                    <input type="checkbox" class="sidebar__listradio" name="sindh" value="sindh">
+                </li>
+                <li class="sidebar__listitem">
+                    <p class="sidebar__listtext">Kpk</p>
+                    <input type="checkbox" class="sidebar__listradio" name="kpk" value="kpk">
+                </li>
+                <li class="sidebar__listitem">
+                    <p class="sidebar__listtext">Blouchistan</p>
+                    <input type="checkbox" class="sidebar__listradio" name="Blouchistan" value="Blouchistan">
+                </li>
             </ul>
         </div>
         <div class="sidebar__listcont">
@@ -43,9 +55,18 @@
                 <i class="fas fa-chevron-down sidebar__weatherdrop"></i>
             </div>
             <ul class="sidebar__list sidebar__weathercontent">
-                <li class="sidebar__listitem">Cool</li>
-                <li class="sidebar__listitem">Hot</li>
-                <li class="sidebar__listitem">Normal</li>
+                <li class="sidebar__listitem">
+                    <p class="sidebar__listtext">Cool</p>
+                    <input type="checkbox" class="sidebar__listradio" name="cool" value="cool">
+                </li>
+                <li class="sidebar__listitem">
+                    <p class="sidebar__listtext">Hot</p>
+                    <input type="checkbox" class="sidebar__listradio" name="hot" value="hot">
+                </li>
+                <li class="sidebar__listitem">
+                    <p class="sidebar__listtext">Normal</p>
+                    <input type="checkbox" class="sidebar__listradio" name="normal" value="normal">
+                </li>
             </ul>
         </div>
         <div class="sidebar__listcont">
@@ -54,10 +75,22 @@
                 <i class="fas fa-chevron-down sidebar__typedrop"></i>
             </div>
             <ul class="sidebar__list sidebar__typecontent">
-                <li class="sidebar__listitem">Religious</li>
-                <li class="sidebar__listitem">Adventourous</li>
-                <li class="sidebar__listitem">Health</li>
+                <li class="sidebar__listitem">
+                    <p class="sidebar__listtext">Religious</p>
+                    <input type="checkbox" class="sidebar__listradio" name="religious" value="religious">
+                </li>
+                <li class="sidebar__listitem">
+                    <p class="sidebar__listtext">Adventourous</p>
+                    <input type="checkbox" class="sidebar__listradio" name="adventourous" value="adventourous">
+                </li>
+                <li class="sidebar__listitem">
+                    <p class="sidebar__listtext">Historical</p>
+                    <input type="checkbox" class="sidebar__listradio" name="historical" value="historical">
+                </li>
             </ul>
+        </div>
+        <div class="sidebar__listcont">
+            <button class="submit submit--filter" >Apply Filter</button>
         </div>
     </div>
 </section>
