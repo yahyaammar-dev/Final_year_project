@@ -43,14 +43,18 @@
                     arr.push(data[i].value)
                 }
             }
+            var filters = JSON.stringify(arr);
             $.ajax({
                 url: "http://localhost:8001/filterdestination",
-                data: {info: arr},
-                success: function($dest) {
-                    console.log($dest)
-                    // let len = Object.entries($dest).length
-                    // $(".listing__content").empty();
-                    // $.each($dest, function() {
+                data: {info: filters},
+                success: function(dest) {
+                    console.log(JSON.parse(dest))
+                    let len = Object.entries(dest).length
+                    $(".listing__content").empty();
+
+                   console.log(dest.length)
+
+                    // $.each(dest, function() {
                     //     var name = this['name'];
                     //     var price = this['price'];
                     //     var type = this['type'];
