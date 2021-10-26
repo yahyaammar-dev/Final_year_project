@@ -12,6 +12,7 @@ use App\Http\Controllers\Homeitems;
 use App\Http\Controllers\Newsletter;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\Useraccount;
+use App\Http\Controllers\Calculatereviews;
 
 
 Route::get('signup',function (){
@@ -152,3 +153,5 @@ Route::post('/',[Newsletter::class,'register']);
 Route::get('send-mail', [MailController::class,'sendMail']);
 
 Route::get('useraccount', [Useraccount::class,'Showaccount'] );
+
+Route::get('Calculatereviews', [Calculatereviews::class,'Calculate'] );
