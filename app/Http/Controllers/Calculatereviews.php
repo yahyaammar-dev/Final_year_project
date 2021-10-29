@@ -21,7 +21,12 @@ class Calculatereviews extends Controller
              $sum += $data[$j][0];
         }
         if($sum!=0){
-            echo $sum/(count($data));
+            $total =  $sum/(count($data));
+            $arr = array(
+                "review" => $total,
+                "id"=> $req->id
+            );
+            echo json_encode($arr);
         }else{
             echo 0;
         }
