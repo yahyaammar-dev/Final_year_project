@@ -6,8 +6,23 @@
         <x-block :dest="$item"/>
         @endforeach
 
+        <script>
+                let blocks = $(".block");
+                for(let i=0; i<blocks.length; i++){
+                    blocks[i].addEventListener('click',function(){
+                        let id = this.querySelector(".blocks__id").textContent
+                        $.ajax({
+                            url:"http://localhost:8001/saveid",
+                            data:"{id: id}",
+                            success: function(data){
+                                console.log(data)
+                            }
+                        });
+                        //window.location.replace("http://localhost:8001/destinations");
+                    });
+                }
+        </script>
+    
     </div>
 </div>
 <button type="submit" class="submit submit--center">Register</button>
-
-

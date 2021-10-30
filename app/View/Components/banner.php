@@ -11,9 +11,12 @@ class banner extends Component
      *
      * @return void
      */
-    public function __construct()
+
+    public $type;
+
+    public function __construct($type)
     {
-        //
+        $this->type = $type;
     }
 
     /**

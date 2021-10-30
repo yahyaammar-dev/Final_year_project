@@ -8,6 +8,10 @@
         .blocks__range, .blocks__price, .blocks__category, .blocks__region, .blocks__weather{
             display: none;
         }
+        .blocks__id{
+            position: absolute;
+            opacity: 0;
+        }
     }
     &:hover{
         .block__info{

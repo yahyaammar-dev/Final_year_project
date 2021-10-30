@@ -899,6 +899,11 @@ tbody {
   display: none;
 }
 
+.block .block__info .blocks__id {
+  position: absolute;
+  opacity: 0;
+}
+
 .block:hover .block__info {
   position: absolute;
   background-color: white;

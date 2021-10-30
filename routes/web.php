@@ -13,6 +13,7 @@ use App\Http\Controllers\Newsletter;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\Useraccount;
 use App\Http\Controllers\Calculatereviews;
+use App\Http\Controllers\DestinationSingle;
 
 
 Route::get('signup',function (){
@@ -27,9 +28,6 @@ Route::get('muree',function (){
     return view("muree");
 });
 
-Route::get('destinations',function (){
-    return view("destinations");
-});
 
 Route::get('hotel',function (){
     return view("hotel");
@@ -155,3 +153,5 @@ Route::get('send-mail', [MailController::class,'sendMail']);
 Route::get('useraccount', [Useraccount::class,'Showaccount'] );
 
 Route::get('Calculatereviews', [Calculatereviews::class,'Calculate'] );
+
+Route::get('destinations', [DestinationSingle::class , 'SingleDestination']);
