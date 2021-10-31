@@ -14,6 +14,7 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\Useraccount;
 use App\Http\Controllers\Calculatereviews;
 use App\Http\Controllers\DestinationSingle;
+use App\Http\Controllers\SaveId;
 
 
 Route::get('signup',function (){
@@ -155,3 +156,5 @@ Route::get('useraccount', [Useraccount::class,'Showaccount'] );
 Route::get('Calculatereviews', [Calculatereviews::class,'Calculate'] );
 
 Route::get('destinations', [DestinationSingle::class , 'SingleDestination']);
+
+Route::get('saveid', [SaveId::class , 'Save']);
