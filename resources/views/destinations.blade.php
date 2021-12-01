@@ -20,20 +20,27 @@
 
     <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
 
+
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/vendor/slick/slick.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/vendor/slick/slick-theme.css')}}"/>
+
+    <script type="text/javascript" src="{{URL::asset('js/vendor/slick/slick.min.js')}}"></script>
+
+
     <link rel="stylesheet" href="{{URL::asset('css/main.css')}}">
 
 
 </head>
 <body>
     
-<?php  echo $data[$id-1]['name'];    ?>
+<?php  echo $dataa[$id-1]['name'];    ?>
 <?php  echo $videos[1];    ?>
 
 
 
    
     <x-header />
-    <x-videos />
+    <x-videos :id="$id" :dataa="$dataa" :videos="$videos"/>
     <x-images />
     <x-dodont />
     <!-- Three time blocks here -->

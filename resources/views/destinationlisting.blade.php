@@ -20,6 +20,8 @@
 </head>
 
 <body>
+
+
     <x-header />
     <x-banner :type="$type"/>
     <button class="sidebar__open" onclick="openNav()">☰</button>

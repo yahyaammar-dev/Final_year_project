@@ -11,9 +11,18 @@ class videos extends Component
      *
      * @return void
      */
-    public function __construct()
+
+
+    public $id;
+    public $dataa;
+    public $videos;
+
+
+    public function __construct($id, $dataa, $videos)
     {
-        //
+        $this->id = $id;
+        $this->dataa = $dataa;
+        $this->videos = $videos;
     }
 
     /**

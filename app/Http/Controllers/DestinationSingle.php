@@ -13,7 +13,7 @@ class DestinationSingle extends Controller
         // id of destination
         $sid = $req->session()->get('id');
         // data of destination
-        $data = Adddestinationm::all()->where('destination_id', $sid);
+        $dataa = Adddestinationm::all()->where('destination_id', $sid);
         // videos of destination   
         $vid = Destination_Videos::select('video')->where('destination',$sid)->get();
         $videoItem = [];
@@ -24,7 +24,7 @@ class DestinationSingle extends Controller
 
         return view('destinations', [
              'id'=>$sid,
-             'data'=>$data,
+             'dataa'=>$dataa,
              'videos'=>$videoItem
          ]);
     }
