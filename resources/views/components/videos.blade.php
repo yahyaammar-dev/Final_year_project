@@ -17,25 +17,15 @@
     
         <div class="slider" >        
         <?php 
-
-                    foreach($videos as $video){
-                        ?>
-                        <div class="videos__item videos__active">
-                            <iframe width="300" height="200" src="<?php echo $video[0]["url"]; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="videos__thumbnail" allowfullscreen></iframe>
-                         </div>
-                          <?php 
-                        
-                    }
-
-
+            foreach($videos as $video){
+                ?>
+                <div class="videos__item videos__active">
+                    <iframe width="300" height="200" src="<?php echo $video[0]["url"]; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="videos__thumbnail" allowfullscreen></iframe>
+                    </div>
+                    <?php 
+            }
         ?>
-
 </div>
-
-
-
-
-
         <script>
             $('.slider').slick({
                 infinite: true,
@@ -44,7 +34,6 @@
                 arrows: true
             });
         </script>
-
     </div>
     <!-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh -->
 </section>

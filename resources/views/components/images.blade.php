@@ -1,17 +1,28 @@
-<!-- Bootstrap Icon -->
 <div class="images">
     <div>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img class="images__image d-block w-100" src="{{URL('images/signup-bg.jpg')}}" alt="First slide">
+
+            <?php $i=0; ?>
+
+            <?php foreach($images as $image){  
+                
+                $i++;
+                
+                ?>
+            <div class="carousel-item  
+            
+            <?php 
+
+if($i==1){
+    echo "active";
+}
+                ?>
+            
+            ">
+                <img class="images__image d-block w-100" src="<?php echo "http://localhost:8001/images/" . $image[0]["url"]; ?>" alt="First slide">
             </div>
-            <div class="carousel-item">
-            <img class="images__image d-block w-100" src="{{URL('images/signup-bg.jpg')}}" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-            <img class="images__image d-block w-100" src="{{URL('images/signup-bg.jpg')}}" alt="Third slide">
-            </div>
+            <?php  } ?>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

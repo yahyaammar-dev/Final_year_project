@@ -11,9 +11,12 @@ class dodont extends Component
      *
      * @return void
      */
-    public function __construct()
+
+    public $laws;    
+
+    public function __construct($laws)
     {
-        //
+        $this->laws = $laws;
     }
 
     /**

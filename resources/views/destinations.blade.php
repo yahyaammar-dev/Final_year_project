@@ -12,41 +12,23 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-   
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
     <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
-
-
     <link rel="stylesheet" type="text/css" href="{{URL::asset('css/vendor/slick/slick.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{URL::asset('css/vendor/slick/slick-theme.css')}}"/>
-
     <script type="text/javascript" src="{{URL::asset('js/vendor/slick/slick.min.js')}}"></script>
-
-
     <link rel="stylesheet" href="{{URL::asset('css/main.css')}}">
-
-
 </head>
 <body>
-    
 <?php  echo $dataa[$id-1]['name'];    ?>
-<?php  echo $videos[1];    ?>
-
-
-
-   
+<?php  echo $videos[1];    ?> 
     <x-header />
     <x-videos :id="$id" :dataa="$dataa" :videos="$videos"/>
-    <x-images />
-    <x-dodont />
+    <x-images :images="$images" />
+    <x-dodont :laws="$laws"/>
     <!-- Three time blocks here -->
     <x-footer />
-
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
-
 </body>
 </html>
