@@ -1,0 +1,17 @@
+.reviews{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    .reviews__listitem{
+        list-style-type: none;
+        .reviews__listitemcontent{
+            display: grid;
+            grid-template-columns: 10% 90%;
+            .reviews__listitemicon{
+                background-color: $secondary-color;
+                padding: 10px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+    }
+}

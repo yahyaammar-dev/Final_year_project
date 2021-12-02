@@ -8,6 +8,9 @@ use App\Models\Images;
 use App\Models\Destination_images;
 use App\Models\Laws;
 use App\Models\Destination_laws;
+use App\Models\Destination_Reviews;
+use App\Models\Reviews;
+
 
 use Illuminate\Http\Request;
 
@@ -36,16 +39,24 @@ class DestinationSingle extends Controller
         $laws = Destination_laws::select('laws')->where('destination',$sid)->get();
         $lawItem = []; 
         for($i=0; $i<count($laws); $i++){
-            $src = Laws::select('content')->where('id',$laws[$i]["id"])->get();
+            $src = Laws::select('type','content')->where('id',$laws[$i]["laws"])->get();
             $lawItem[$i] = $src;
          }
+        //Reviews of destinations
+        $reviews = Destination_Reviews::select('review')->where('destination',$sid)->get();
+        $reviewItem = [];
+        for($i=0; $i<count($reviews); $i++){
+            $src = Reviews::select('author','text')->where('review_id',$reviews[$i]["review"])->get();
+            $reviewItem[$i] = $src;
+        }
  
         return view('destinations', [
              'id'=>$sid,
              'dataa'=>$dataa,
              'videos'=>$videoItem,
              'images'=>$imageItem,
-             'laws'=>$lawItem
+             'laws'=>$lawItem,
+             'review'=>$reviewItem
          ]);
     }
 }

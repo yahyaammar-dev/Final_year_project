@@ -27,6 +27,7 @@
     <x-videos :id="$id" :dataa="$dataa" :videos="$videos"/>
     <x-images :images="$images" />
     <x-dodont :laws="$laws"/>
+    <x-reviews :review="$review" />
     <!-- Three time blocks here -->
     <x-footer />
     <script src="{{URL::asset('js/hamburger.js')}}"></script>

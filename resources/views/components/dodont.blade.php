@@ -1,10 +1,3 @@
-<?php 
-
-    print_r($laws[0]);
-
-
-?>
-
 <section class="dodontContainer">
     <div class="dodont">
         <div class="dodont__info">
@@ -13,64 +6,56 @@
         </div>
         <div class="dodont__lists">
             <ul class="dodont__listlist">
-                <li class="dodont__listitem">
-                    <div class="dodont__listitemiconcontcont">
-                        <i class="dodont__listitemicon fas fa-bars"></i>
-                    </div>
-                    <div class="dodont__law">
-                        
-                        <p>Loreum ipsum this is the text which is used to get number jfsklasd dfljdsakf dsjflk dsaf kdsafj l.</p>
-                    </div>
-                </li>
+                <?php 
+
+            foreach($laws as $law){
+                if($law[0]["type"]=="dos"){                      
+            ?>
+
                 <li class="dodont__listitem">
                     <div class="dodont__listitemiconcont">
                         <i class="dodont__listitemicon fas fa-bars"></i>
                     </div>
                     <div class="dodont__law">
-                        
-                        <p>Loreum ipsum this is the text which is used to get number jfsklasd dfljdsakf dsjflk dsaf kdsafj l.</p>
+                        <p>
+                            <?php 
+                                echo $law[0]["content"];
+                            ?>
+                        </p>
                     </div>
                 </li>
-                <li class="dodont__listitem">
-                    <div class="dodont__listitemiconcont">
-                        <i class="dodont__listitemicon fas fa-bars"></i>
-                    </div>
-                    <div class="dodont__law">
-                        
-                        <p>Loreum ipsum this is the text which is used to get number jfsklasd dfljdsakf dsjflk dsaf kdsafj l.</p>
-                    </div>
-                </li>
+                <?php
+
+                }
+            }
+            ?>
             </ul>
+            
+            
             <ul class="dodont__listlist">
-            <li class="dodont__listitem">
-                    <div class="dodont__listitemiconcontcont">
-                        <i class="dodont__listitemicon fas fa-bars"></i>
-                    </div>
-                    <div class="dodont__law">
-                        
-                        <p>Loreum ipsum this is the text which is used to get number jfsklasd dfljdsakf dsjflk dsaf kdsafj l.</p>
-                    </div>
-                </li>
-                <li class="dodont__listitem">
-                    <div class="dodont__listitemiconcont">
-                        <i class="dodont__listitemicon fas fa-bars"></i>
-                    </div>
-                    <div class="dodont__law">
-                        
-                        <p>Loreum ipsum this is the text which is used to get number jfsklasd dfljdsakf dsjflk dsaf kdsafj l.</p>
-                    </div>
-                </li>
-                <li class="dodont__listitem">
-                    <div class="dodont__listitemiconcont">
-                        <i class="dodont__listitemicon fas fa-bars"></i>
-                    </div>
-                    <div class="dodont__law">
-                        
-                        <p>Loreum ipsum this is the text which is used to get number jfsklasd dfljdsakf dsjflk dsaf kdsafj l.</p>
-                    </div>
-                </li>
+            
+            
+            <?php 
+
+                foreach($laws as $law){
+
+                    if($law[0]["type"]=="donts"){
+?>
+                        <li class="dodont__listitem">
+                        <div class="dodont__listitemiconcontcont">
+                            <i class="dodont__listitemicon fas fa-bars"></i>
+                        </div>
+                        <div class="dodont__law">
+    
+                            <p><?php echo $law[0]["content"] ?></p>
+                        </div>
+                    </li>
+            <?php   
+}
+                }
+            ?>
             </ul>
-        </div>    
+        </div>
     </div>
     <!-- No surplus words or unnecessary actions. - Marcus Aurelius -->
 </section>

@@ -1827,4 +1827,29 @@ tbody {
     padding: 5.5px 0 5px 10px;
   }
 }
+
+.reviews {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.reviews .reviews__listitem {
+  list-style-type: none;
+}
+
+.reviews .reviews__listitem .reviews__listitemcontent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 90%;
+      grid-template-columns: 10% 90%;
+}
+
+.reviews .reviews__listitem .reviews__listitemcontent .reviews__listitemicon {
+  background-color: #28834c;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+}
 /*# sourceMappingURL=main.css.map */
