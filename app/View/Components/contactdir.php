@@ -11,9 +11,12 @@ class contactdir extends Component
      *
      * @return void
      */
-    public function __construct()
+
+    public $contact;
+
+    public function __construct($contact)
     {
-        //
+        $this->contact = $contact;
     }
 
     /**

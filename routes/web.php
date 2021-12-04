@@ -15,6 +15,7 @@ use App\Http\Controllers\Useraccount;
 use App\Http\Controllers\Calculatereviews;
 use App\Http\Controllers\DestinationSingle;
 use App\Http\Controllers\SaveId;
+use App\Http\Controllers\Blog_detail;
 
 
 Route::get('signup',function (){
@@ -63,9 +64,6 @@ Route::get('bloglisting',function (){
     return view("bloglisting");
 });
 
-Route::get('blogdetail',function (){
-    return view("blogdetail");
-});
 
 Route::get('blogcategorylisting',function (){
     return view("blogcategorylisting");
@@ -158,3 +156,5 @@ Route::get('Calculatereviews', [Calculatereviews::class,'Calculate'] );
 Route::get('destinations', [DestinationSingle::class , 'SingleDestination']);
 
 Route::get('saveid', [SaveId::class , 'Save']);
+
+Route::post('blogdetail', [Blog_detail::class , 'SingleBlog']);

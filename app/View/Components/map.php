@@ -4,19 +4,19 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class blogblocks extends Component
+class map extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    
-    public $blog;
 
-    public function __construct($blog)
+    public $dataa; 
+
+    public function __construct($dataa)
     {
-        $this->blog = $blog;
+        $this->dataa = $dataa;
     }
 
     /**
@@ -26,6 +26,6 @@ class blogblocks extends Component
      */
     public function render()
     {
-        return view('components.blogblocks');
+        return view('components.map');
     }
 }

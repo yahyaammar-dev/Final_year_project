@@ -10,6 +10,16 @@ use App\Models\Laws;
 use App\Models\Destination_laws;
 use App\Models\Destination_Reviews;
 use App\Models\Reviews;
+use App\Models\contact;
+use App\Models\destination_contact;
+use App\Models\destination_blog;
+use App\Models\blog;
+use App\Models\blog_author;
+use App\Models\blog_category;
+use App\Models\blog_image;
+use App\Models\product;
+use App\Models\destination_product;
+
 
 
 use Illuminate\Http\Request;
@@ -49,14 +59,43 @@ class DestinationSingle extends Controller
             $src = Reviews::select('author','text')->where('review_id',$reviews[$i]["review"])->get();
             $reviewItem[$i] = $src;
         }
- 
+        //Contacts of destinations
+        $contacts = destination_contact::select('contact')->where('destination',$sid)->get();
+        $contactItem = [];
+        for($i=0; $i<count($reviews); $i++){
+            $src = contact::select('name','contact_no','type')->where('id',$contacts[$i]["contact"])->get();
+            $contactItem[$i] = $src;
+        }
+        //Blogs
+        $blogs = destination_blog::select('blog')->where('destination',$sid)->get();
+        $blogItem = [];
+        for($i=0; $i<count($blogs); $i++){
+            $src = blog::select('blog_id','name','author','category','content')->where('blog_id',$blogs[$i]["blog"])->get();
+            $author = blog_author::select('name')->where('id',$src[0]['author'])->get();
+            $imageId = blog_image::select('image_id')->where('blog_id',$src[0]['blog_id'])->get();
+            $image = Images::select('url')->where('images_id',$imageId[0]["image_id"])->get();
+            $category = blog_category::select('name')->where('cat_id',$src[0]['category'])->get();
+            $src[0]['author']= $author;
+            $src['image']= $image;
+            $src[0]['category']= $category;
+            $blogItem[$i] = $src; 
+        }
+        //Products of destinations
+        $contacts = destination_product::select('contact')->where('destination',$sid)->get();
+        $contactItem = [];
+        for($i=0; $i<count($reviews); $i++){
+            $src = contact::select('destination')->where('id',$contacts[$i]["contact"])->get();
+            $contactItem[$i] = $src;
+        }
         return view('destinations', [
              'id'=>$sid,
              'dataa'=>$dataa,
              'videos'=>$videoItem,
              'images'=>$imageItem,
              'laws'=>$lawItem,
-             'review'=>$reviewItem
-         ]);
+             'review'=>$reviewItem,
+             'contact'=>$contactItem,
+             'blog'=>$blogItem
+            ]);
     }
 }

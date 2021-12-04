@@ -667,6 +667,10 @@ tbody {
   }
 }
 
+.blockscontainer .blocks .blocks__list .blocks__item .blocks__id {
+  display: none;
+}
+
 .blockscontainer .blocks .blocks__list .blocks__item .blocks__title {
   margin: 0;
 }
@@ -1232,6 +1236,10 @@ tbody {
     -ms-grid-row: 5;
         grid-row-start: 5;
   }
+}
+
+.contactdir .contactdir__head {
+  text-align: center;
 }
 
 .contactdir__contact {
@@ -1851,5 +1859,11 @@ tbody {
   padding: 10px;
   border-radius: 50%;
   color: white;
+}
+
+.map {
+  width: 100%;
+  min-height: 500px;
+  max-height: 500px;
 }
 /*# sourceMappingURL=main.css.map */
