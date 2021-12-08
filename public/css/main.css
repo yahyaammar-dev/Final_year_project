@@ -1727,7 +1727,8 @@ tbody {
 
 .adddestinationformContainer {
   background: url("../images/signup-bg.jpg");
-  height: 85vh;
+  height: 100%;
+  padding: 5rem 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1752,6 +1753,28 @@ tbody {
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
   grid-column-gap: 10px;
+}
+
+.adddestinationformContainer .adddestinationform .adddestinationform__heading {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.adddestinationformContainer .adddestinationform .adddestinationform__fileupload, .adddestinationformContainer .adddestinationform .adddestinationform__addhotel {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.adddestinationformContainer .adddestinationform .addblog {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.adddestinationformContainer .adddestinationform .adddestinationform__addhotel {
+  margin-bottom: 1rem;
 }
 
 .adddestinationformContainer .adddestinationform .adddestinationform__label {

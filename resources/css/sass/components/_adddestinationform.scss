@@ -1,6 +1,7 @@
 .adddestinationformContainer{
     background: url("../images/signup-bg.jpg");
-    height: 85vh;
+    height: 100%;
+    padding: 5rem 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -15,6 +16,18 @@
         display: grid;
         grid-template-columns: auto auto;
         grid-column-gap: 10px;
+        .adddestinationform__heading{
+            grid-column: 1 / span 2;
+        }
+        .adddestinationform__fileupload,.adddestinationform__addhotel{
+            grid-column: 1 / span 2;
+        }
+        .addblog{
+            grid-column: 1 / span 2;
+        }
+        .adddestinationform__addhotel{
+            margin-bottom: 1rem;
+        }
         .adddestinationform__label{
             color: white;
             font-family: $secondary-font;

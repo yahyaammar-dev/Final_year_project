@@ -30,8 +30,8 @@
     <x-map :dataa="$dataa"/>
     <x-contactDir :contact="$contact"/>
     <x-blogblocks :blog="$blog"/>
-    <!-- Three time blocks here -->
+    <!--Product goes here with its own blocks and block-->
+    <!--Hotels goes here with its own blocks and block-->
     <x-footer />
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
 </body>
-</html>

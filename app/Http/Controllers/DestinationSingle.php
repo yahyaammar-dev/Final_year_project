@@ -19,6 +19,9 @@ use App\Models\blog_category;
 use App\Models\blog_image;
 use App\Models\product;
 use App\Models\destination_product;
+use App\Models\hotel;
+use App\Models\destination_hotel;
+
 
 
 
@@ -81,11 +84,18 @@ class DestinationSingle extends Controller
             $blogItem[$i] = $src; 
         }
         //Products of destinations
-        $contacts = destination_product::select('contact')->where('destination',$sid)->get();
-        $contactItem = [];
+        $contacts = destination_product::select('product')->where('destination',$sid)->get();
+        $productItem = [];
         for($i=0; $i<count($reviews); $i++){
-            $src = contact::select('destination')->where('id',$contacts[$i]["contact"])->get();
-            $contactItem[$i] = $src;
+            $src = product::select('id','name','description','price','type')->where('id',$contacts[0]["product"])->get();
+            $productItem[$i] = $src;
+        }
+        //Hotels of destinations
+        $hotels = destination_hotel::select('hotel')->where('destination',$sid)->get();
+        $hotelItem = [];
+        for($i=0; $i<count($reviews); $i++){
+            $src = hotel::select('id','name','description','price','phone','coord-x','coord-y')->where('id',$hotels[0]["hotel"])->get();
+            $hotelItem[$i] = $src;
         }
         return view('destinations', [
              'id'=>$sid,
@@ -95,7 +105,9 @@ class DestinationSingle extends Controller
              'laws'=>$lawItem,
              'review'=>$reviewItem,
              'contact'=>$contactItem,
-             'blog'=>$blogItem
+             'blog'=>$blogItem,
+             'product'=>$productItem,
+             'hotel'=>$hotelItem
             ]);
     }
 }

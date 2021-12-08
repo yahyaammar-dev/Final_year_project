@@ -16,6 +16,8 @@ use App\Http\Controllers\Calculatereviews;
 use App\Http\Controllers\DestinationSingle;
 use App\Http\Controllers\SaveId;
 use App\Http\Controllers\Blog_detail;
+use App\Http\Controllers\InsertImages;
+use App\Http\Controllers\CalculateId;
 
 
 Route::get('signup',function (){
@@ -158,3 +160,7 @@ Route::get('destinations', [DestinationSingle::class , 'SingleDestination']);
 Route::get('saveid', [SaveId::class , 'Save']);
 
 Route::post('blogdetail', [Blog_detail::class , 'SingleBlog']);
+
+Route::post('insertimages', [InsertImages::class , 'InsertImages']);
+
+Route::post('calculateid', [CalculateId::class , 'CalculateId']);
