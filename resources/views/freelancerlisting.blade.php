@@ -18,12 +18,17 @@
 </head>
 <body>
 
+
+
+    <?php $abc = "freelancer" ?>
+
     <x-header />
-    <x-banner />
+    <x-banner :type="$abc"/>
     <button class="sidebar__open" onclick="openNav()">☰</button> 
-    <x-listing />
+    <x-freelancerlisting :abc="$data"/>
     <x-footer />
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
 </body>
 </html>
+

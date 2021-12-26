@@ -18,10 +18,12 @@
 </head>
 <body>
 
+<?php $cz = "Products"; ?>
+
     <x-header />
-    <x-banner />
+    <x-banner :type ="$cz"/>
     <button class="sidebar__open" onclick="openNav()">☰</button> 
- <!-- Listing -->
+    <x-productlisting :abc="$data" />
     <x-footer />
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>

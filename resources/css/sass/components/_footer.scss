@@ -13,10 +13,13 @@
                     list-style-type: none;
                     padding: 0;
                     margin: 0;
-                    .footer__listitem{
-                        .footer__listitemlink{
-                            color: $white-color;
-                            text-decoration: none;
+                    .footer__link{
+                        color: white;
+                        .footer__listitem{
+                            .footer__listitemlink{
+                                color: $white-color;
+                                text-decoration: none;
+                            }
                         }
                     }
                 }

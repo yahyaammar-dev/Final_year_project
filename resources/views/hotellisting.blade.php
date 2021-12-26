@@ -17,9 +17,11 @@
 </head>
 <body>
 
+    <?php $cz = "hotel"; ?>
+
     <x-header />
-    <x-banner />
-    <x-listing />
+    <x-banner :type ="$cz"/>
+    <x-hotellisting :abc="$data" />
     <x-footer />
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>

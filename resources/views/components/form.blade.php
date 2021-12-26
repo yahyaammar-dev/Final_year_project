@@ -21,6 +21,7 @@
             <i class="fas fa-phone form__icon"></i>
             <input class="form__input" name="phone" type="number" placeholder="Enter Your Phone Number"><br><br>
         </div>
+        <p class="form__loginlink">Already Have an account? <a href="http://localhost:8001/login" class="form__loginlinkurl">Click Here</a></p> 
         <button type="submit" class="submit">Register</button>
     </form>
     <!-- Knowing is not enough; we must apply. Being willing is not enough; we must do. - Leonardo da Vinci -->

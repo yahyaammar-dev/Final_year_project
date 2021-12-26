@@ -1,12 +1,8 @@
+<h1>Reviews</h1>
 <ul class="reviews">
-
-
 <?php foreach($review as $rev){
   
 ?>
-
-   
-
     <li class="reviews__listitem">
         <div class="reviews__listitemcontent">
             <i class="reviews__listitemicon fas fa-bars"></i>
@@ -20,13 +16,7 @@
             </p>
         </div>
     </li>
-
 <?php
-
     } 
-
 ?>
-
-
-
 </ul>

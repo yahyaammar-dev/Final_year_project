@@ -4,9 +4,9 @@
             <div class="footer__section">
                 <h2 class="footer__secheading">Links</h2>
                 <ul class="footer__list">
-                    <li class="footer__listitem">About</li>
-                    <li class="footer__listitem">Contact</li>
-                    <li class="footer__listitem"><a href="http://localhost:8001/visas" class="footer__listitemlink">Visas</a></li>
+                    <a class="footer__link" href="#"><li class="footer__listitem">About</li></a>
+                    <a class="footer__link" href=""><li class="footer__listitem">Contact</li></a>
+                    <a class="footer__link" href="http://localhost:8001/visas"><li class="footer__listitem">Visas</li></a>
                 </ul>  
             </div>
             <div class="footer__section">

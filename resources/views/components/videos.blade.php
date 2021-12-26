@@ -21,6 +21,7 @@
 
 
 
+
   const form = document.querySelector(".top-banner form");
   const input = document.querySelector(".top-banner input");
   const list = document.querySelector(".ajax-section .cities");

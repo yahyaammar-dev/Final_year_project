@@ -126,8 +126,8 @@
         <label class="adddestinationform__label item" for="hotelimages">Hotel Images</label>
         <div class="item adddestinationform__fileupload2">
             <i class="fa fa-user adddestinationform__icon"></i>
-            <input type="file" class="adddestinationform__input hotelimages" placeholder="Enter files to be uploaded"
-                name="name" multiple>
+            <input type="file" class="adddestinationform__input hotelimages" id="hotelimages" placeholder="Enter files to be uploaded"
+                name="hotelimages" multiple>
         </div>
 
         <div class="item">
@@ -180,7 +180,7 @@
         <div class="item adddestinationform__fileupload2">
             <i class="fa fa-user adddestinationform__icon"></i>
             <input type="file" class="adddestinationform__input freelancerimages"
-                placeholder="Enter files to be uploaded" name="name" multiple>
+                placeholder="Enter files to be uploaded" name="freelancerimages" multiple>
         </div>
 
         <div class="item">
@@ -234,8 +234,8 @@
         <label class="adddestinationform__label item" for="productimages">Product Images</label>
         <div class="item adddestinationform__fileupload2">
             <i class="fa fa-user adddestinationform__icon"></i>
-            <input type="file" class="adddestinationform__input productimages" placeholder="Enter files to be uploaded"
-                name="name" multiple>
+            <input type="file" id="productimages" class="adddestinationform__input productimages" placeholder="Enter files to be uploaded"
+                name="productimages" multiple>
         </div>
 
         <div class="item">
@@ -328,12 +328,49 @@
         <label class="adddestinationform__label item" for="laws">Laws</label>
         <div class="item adddestinationform__fileupload2">
             <i class="fa fa-user adddestinationform__icon"></i>
-            <input type="text" class="adddestinationform__input lawtype" placeholder="Enter law's typr" name="typr">
+            <input type="text" class="adddestinationform__input lawtype" placeholder="Enter law's typr" name="lawtype"  class="lawtype">
             <i class="fa fa-user adddestinationform__icon"></i>
-            <input type="text" class="adddestinationform__input law" placeholder="Enter law's text" name="law">
+            <input type="text" class="adddestinationform__input law" placeholder="Enter law's text" name="lawtext" class="lawtext">
         </div>
 
         <button class="adddestinationform__addlaw submit">Add law</button>
+
+
+
+
+
+
+
+
+
+
+        <h1 class="adddestinationform__heading">Add Contacts</h1>
+
+
+        <label class="adddestinationform__label item" for="laws">Name</label>
+        <div class="item adddestinationform__fileupload2">
+            <i class="fa fa-user adddestinationform__icon"></i>
+            <input type="text" class="adddestinationform__input contactname" placeholder="Enter contact name" name="contactname" >
+        </div>
+
+        <label class="adddestinationform__label item" for="laws">Contact No.</label>
+        <div class="item adddestinationform__fileupload2">
+            <i class="fa fa-user adddestinationform__icon"></i>
+            <input type="text" class="adddestinationform__input contactno" placeholder="Enter Contact No." name="contactno" >
+        </div>
+
+        <label class="adddestinationform__label item" for="laws">Contact Type</label>
+        <div class="item adddestinationform__fileupload2">
+            <i class="fa fa-user adddestinationform__icon"></i>
+            <input type="text" class="adddestinationform__input contacttype" placeholder="Enter contacttype" name="contacttype" >
+        </div>
+
+        <button class="adddestinationform__addlaw addcontact">Add Contact</button>
+
+
+
+
+
 
         <button type="submit" class="finalsubmission submit">Register</button>
 
@@ -357,6 +394,9 @@ btn.addEventListener("click", function() {
 
 // creating a list of hotels
 var hotels = [];
+
+var himg = [];
+
 var btn = document.querySelector(".adddestinationform__addhotel");
 btn.addEventListener("click", function() {
     event.preventDefault()
@@ -368,6 +408,15 @@ btn.addEventListener("click", function() {
     var hotelcoordy = document.querySelector(".hotelcoordy").value;
     var hotelimages = document.querySelector(".hotelimages").files;
 
+    var hotelimagesnames = [];
+    for(var i= 0; i<hotelimages.length; i++){
+        hotelimagesnames[i] = hotelimages[i]["name"]
+    }
+
+
+
+    himg.push(hotelimagesnames);
+
 
     var hotel = [];
 
@@ -377,6 +426,7 @@ btn.addEventListener("click", function() {
     hotel.push(hotelphone)
     hotel.push(hotelcoordx)
     hotel.push(hotelcoordy)
+    hotel.push(himg)
     hotels.push(hotel)
 
 
@@ -387,6 +437,8 @@ btn.addEventListener("click", function() {
     hotelphone = "";
     hotelcoordx = "";
     hotelcoordy = "";
+    hotelimages = "";
+    himg= [];
 });
 
 
@@ -404,7 +456,12 @@ btn2.addEventListener("click", function() {
 
 
 // creating a list of freelancers
+
+
 var freelancers = [];
+var fimg = [];
+
+
 var btn1 = document.querySelector(".adddestinationform__addfreelancer");
 btn1.addEventListener("click", function() {
     event.preventDefault()
@@ -415,14 +472,30 @@ btn1.addEventListener("click", function() {
     var freelancerimages = document.querySelector(".freelancerimages").files;
 
 
+   
+
+
+    var freelancerimagesnames = [];
+    for(var i= 0; i<freelancerimages.length; i++){
+        freelancerimagesnames[i] = freelancerimages[i]["name"]
+    }
+
+
+    
+
+    fimg.push(freelancerimagesnames)
+
+
+  
+
     var freelancer = [];
 
-    freelancer.push(["freelancer Name", freelancername]);
-    freelancer.push(["freelancer description", freelancerdescription])
-    freelancer.push(["freelancer price", freelancerprice])
-    freelancer.push(["freelancer type", freelancertype])
-    freelancer.push(["freelancer images", freelancerimages])
 
+    freelancer.push(freelancername);
+    freelancer.push(freelancerdescription)
+    freelancer.push(freelancerprice)
+    freelancer.push(freelancertype)
+    freelancer.push(fimg);
 
     freelancers.push(freelancer)
 
@@ -432,9 +505,8 @@ btn1.addEventListener("click", function() {
     freelancerdescription = "";
     freelancerprice = "";
     freelancertype = "";
+    fimg = [];
 });
-
-
 
 // creating a list of videos of freelancers
 var freelancervideos = [];
@@ -446,12 +518,11 @@ btn3.addEventListener("click", function() {
     ele = "";
 });
 
-
-
-
-
 // creating a list of products
 var products = [];
+
+var pro = [];
+
 var btn1 = document.querySelector(".adddestinationform__addproduct");
 btn1.addEventListener("click", function() {
     event.preventDefault()
@@ -462,23 +533,35 @@ btn1.addEventListener("click", function() {
     var productimages = document.querySelector(".productimages").files;
 
 
+    
+
+    var productimagesnames = [];
+    for(var i= 0; i<productimages.length; i++){
+        productimagesnames.push(productimages[i]["name"])
+    }
+
+
+
+    pro.push(productimagesnames)
+
+
+  
     var product = [];
 
-    product.push(["product Name", productname]);
-    product.push(["product description", productdescription])
-    product.push(["product price", productprice])
-    product.push(["product type", producttype])
-    product.push(["product images", productimages])
-
+    product.push(productname);
+    product.push(productdescription)
+    product.push(productprice)
+    product.push(producttype)
+    product.push(productimages)
+    product.push(pro);
 
     products.push(product)
-
-
 
     productname = "";
     productdescription = "";
     productprice = "";
     producttype = "";
+    pro = [];
 });
 
 
@@ -489,7 +572,7 @@ var btn4 = document.querySelector(".addproductlvideo");
 btn4.addEventListener("click", function() {
     event.preventDefault()
     var ele = document.querySelector(".productvideos").value;
-    productvideos.push([freelancers.length, ele])
+    productvideos.push([products.length, ele])
     ele = "";
 });
 
@@ -504,10 +587,26 @@ var btn5 = document.querySelector(".adddestinationform__addlaw");
 btn5.addEventListener("click", function() {
     event.preventDefault()
     var ele = document.querySelector(".lawtype").value;
-    var ele2 = document.querySelector(".law").value;
+    var ele2 = document.querySelector(".lawtext").value;
     laws.push([ele, ele2])
     ele = "";
     ele2 = "";
+});
+
+
+
+// creating a list of laws
+var contacts = [];
+var btn90 = document.querySelector(".addcontact");
+btn90.addEventListener("click", function() {
+    event.preventDefault()
+    var ele = document.querySelector(".contactname").value;
+    var ele2 = document.querySelector(".contactno").value;
+    var ele3 = document.querySelector(".contacttype").value;
+    contacts.push([ele, ele2, ele3])
+    ele = "";
+    ele2 = "";
+    ele3 ="";
 });
 
 
@@ -531,13 +630,8 @@ btn10.addEventListener("click", function() {
     var tvalue = e.options[e.selectedIndex].value;
     var images = document.querySelector(".images").files;
 
-
-
-
     //calculating the id
-
     var id;
-
     $.ajax({
         url: "http://localhost:8001/calculateid",
         method: "POST",
@@ -571,16 +665,10 @@ btn10.addEventListener("click", function() {
         obj.productvideos = productvideos;
         obj.laws = laws;
         obj.blogs = quilldata;
+        obj.contacts = contacts;
         var jsonString = JSON.stringify(obj);
 
-
-
         console.log(obj)
-
-
-
-
-
 
         $.ajax({
             url: "http://localhost:8001/adddestination",
@@ -593,40 +681,27 @@ btn10.addEventListener("click", function() {
                 console.log(data)
             }
         });
-
-
-        sendImages()
-
-
+        sendImages();
+        sendHotelImages();
+        sendProductImages();
     }
 
 
 
     function sendImages() {
-
-
-
+        console.log("Hello")
         var name = document.getElementById("file").files[0].name;
         var form_data = new FormData();
         var ext = name.split('.').pop().toLowerCase();
-
         var oFReader = new FileReader();
         oFReader.readAsDataURL(document.getElementById("file").files[0]);
-
-
-
         var f = document.getElementById("file").files[0];
-
         var imgs = document.getElementById("file").files.length;
-
         console.log(imgs)
-
-
         var fsize = f.size || f.fileSize;
         if (fsize > 20000000) {
             alert("Image File Size is very big");
         } else {
-
             for (let i = 0; i < imgs; i++) {
                 var form_data = new FormData();
                 form_data.append("file", document.getElementById('file').files[i]);
@@ -648,5 +723,77 @@ btn10.addEventListener("click", function() {
         }
     }
 
+    function sendHotelImages() {
+        console.log("hello form send hotel images")
+        var name = document.getElementById("hotelimages").files[0].name;
+        var form_data = new FormData();
+        var ext = name.split('.').pop().toLowerCase();
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("hotelimages").files[0]);
+        var f = document.getElementById("hotelimages").files[0];
+        var imgs = document.getElementById("hotelimages").files.length;
+        console.log(imgs)
+        var fsize = f.size || f.fileSize;
+        if (fsize > 20000000) {
+            alert("Image File Size is very big");
+        } else {
+            for (let i = 0; i < imgs; i++) {
+                var form_data = new FormData();
+                form_data.append("file", document.getElementById('hotelimages').files[i]);
+                $.ajax({
+                    url: "http://localhost:8001/inserthotelimages",
+                    method: "POST",
+                    data: form_data,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    beforeSend: function() {
+                        console.log("sending")
+                    },
+                    success: function(data) {
+                        console.log(data)
+                    }
+                });
+            }
+        }
+    }
+
+
+
+    function sendProductImages() {
+        console.log("hello form send Product images")
+        var name = document.getElementById("productimages").files[0].name;
+        var form_data = new FormData();
+        var ext = name.split('.').pop().toLowerCase();
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("productimages").files[0]);
+        var f = document.getElementById("productimages").files[0];
+        var imgs = document.getElementById("productimages").files.length;
+        console.log(imgs)
+        var fsize = f.size || f.fileSize;
+        if (fsize > 20000000) {
+            alert("Image File Size is very big");
+        } else {
+            console.log(imgs)
+            for (let i = 0; i < imgs; i++) {
+                var form_data = new FormData();
+                form_data.append("file", document.getElementById('productimages').files[i]);
+                $.ajax({
+                    url: "http://localhost:8001/inserthotelimages",
+                    method: "POST",
+                    data: form_data,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    beforeSend: function() {
+                        console.log("sending")
+                    },
+                    success: function(data) {
+                        console.log(data)
+                    }
+                });
+            }
+        }
+    }
 });
 </script>

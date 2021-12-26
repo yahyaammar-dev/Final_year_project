@@ -4,7 +4,6 @@
 
 
         <?php 
-
         foreach($blog as $bl){
             $url =  "images/" . $bl["image"][0]["url"];
         
@@ -19,6 +18,9 @@
         <?php       
         }
         ?>
+
+
+
         </div>
         <button type="submit" class="submit">Load More</button>
     </div>
@@ -28,12 +30,11 @@
 
 
 
+
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 
 <script>
-
-
         $(document).ready(function(){
             $(".blocks__item").click(function(){
                 
@@ -41,22 +42,10 @@
                 let id = $(this).find(".blocks__id").text()
                 let data = @json($blog);
                 
-
-
-
-
-
                 for(var i=0; i<data.length; i++){
                     if(id==data[i][0]["blog_id"]){
                        
-
-
-
-
                         /*
-
-
-
                         $.ajax(
                            
                            url:"http://localhost:8001/blogdetail",
@@ -64,20 +53,9 @@
                                console.log(data)
                            }
                         )
-
-
-
-
                         */
-
-
                    }
                 }
-
-
-
-
-
             })
         })
         

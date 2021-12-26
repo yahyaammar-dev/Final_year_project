@@ -20,8 +20,7 @@
     <link rel="stylesheet" href="{{URL::asset('css/main.css')}}">
 </head>
 <body>
-<?php  echo $dataa[$id-1]['name'];    ?>
-<?php  echo $videos[1];    ?> 
+
     <x-header />
     <x-videos :id="$id" :dataa="$dataa" :videos="$videos"/>
     <x-images :images="$images" />
@@ -30,8 +29,12 @@
     <x-map :dataa="$dataa"/>
     <x-contactDir :contact="$contact"/>
     <x-blogblocks :blog="$blog"/>
-    <!--Product goes here with its own blocks and block-->
-    <!--Hotels goes here with its own blocks and block-->
+    <x-blockproductlist :product="$product"/>
+    <x-blockhotellist :hotel="$hotel"/>
+    <x-blockfreelancerlist :freelancer="$freelancer"/>
+
     <x-footer />
+
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
+
 </body>

@@ -31,6 +31,8 @@
             $freelancer = $dest[1];
             $product = $dest[2];
         }
+
+
     ?>
     <x-blocks :dest="$destination"/>
     <x-blocks :dest="$product"/>

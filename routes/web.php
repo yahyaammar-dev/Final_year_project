@@ -18,6 +18,14 @@ use App\Http\Controllers\SaveId;
 use App\Http\Controllers\Blog_detail;
 use App\Http\Controllers\InsertImages;
 use App\Http\Controllers\CalculateId;
+use App\Http\Controllers\inserthotelimages;
+use App\Http\Controllers\HotelDetail;
+use App\Http\Controllers\freelancerListing;
+use App\Http\Controllers\hotellisting;
+use App\Http\Controllers\productlisting;
+use App\Http\Controllers\bloglisting;
+use App\Http\Controllers\freelancerdetail;
+use App\Http\Controllers\productdetail;
 
 
 Route::get('signup',function (){
@@ -31,7 +39,6 @@ Route::get('login',function (){
 Route::get('muree',function (){
     return view("muree");
 });
-
 
 Route::get('hotel',function (){
     return view("hotel");
@@ -164,3 +171,22 @@ Route::post('blogdetail', [Blog_detail::class , 'SingleBlog']);
 Route::post('insertimages', [InsertImages::class , 'InsertImages']);
 
 Route::post('calculateid', [CalculateId::class , 'CalculateId']);
+
+Route::get('hoteldetail', [HotelDetail::class , 'HotelDetail']);
+
+Route::get('freelancerListing',[freelancerListing::class,'freelancerListing']);
+
+Route::get('hotellisting',[hotellisting::class,'hotellisting']);
+
+Route::get('productlisting',[productlisting::class,'productlisting']);
+
+Route::get('bloglisting',[bloglisting::class,'bloglisting']);
+
+Route::get('hoteldetail/{unique}', [hoteldetail::class,'hoteldetail']);
+
+Route::get('freelancerdetail/{unique}', [freelancerdetail::class,'freelancerdetail']);
+
+Route::get('productdetail/{unique}', [productdetail::class,'productdetail']);
+
+Route::get('blogdetail/{unique}', [BlogDetail::class,'BlogDetail']);
+
