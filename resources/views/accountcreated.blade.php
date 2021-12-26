@@ -10,6 +10,13 @@
 </head>
 <body>
     
+<?php 
+
+    $sid = $req->session()->get('user');
+    echo $sid;
+
+?>
+
     <x-header />
     <x-accountactivated />
     <x-blocks />

@@ -11,9 +11,19 @@ class blogcontent extends Component
      *
      * @return void
      */
-    public function __construct()
+
+
+    public $content;
+    public $auth;
+    public $images;
+    public $cat;
+
+    public function __construct($content, $auth, $images, $cat)
     {
-        //
+        $this->content = $content;
+        $this->auth = $auth;
+        $this->images = $images;
+        $this->cat = $cat;
     }
 
     /**

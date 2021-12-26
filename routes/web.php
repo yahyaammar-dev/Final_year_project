@@ -26,6 +26,7 @@ use App\Http\Controllers\productlisting;
 use App\Http\Controllers\bloglisting;
 use App\Http\Controllers\freelancerdetail;
 use App\Http\Controllers\productdetail;
+use App\Http\Controllers\BlogDetail;
 
 
 Route::get('signup',function (){

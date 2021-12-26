@@ -10,6 +10,9 @@
 </head>
 <body>
 
+
+
+
     <x-header />
     <x-userinfo :user="$user" />
     <!-- Two blocks -->

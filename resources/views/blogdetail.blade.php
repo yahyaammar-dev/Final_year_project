@@ -21,10 +21,10 @@
 </head>
 <body>
 
+    <?php $catname=  $category[0]["name"]; ?>
 
     <x-header />
-    <x-blogcontent />
-    <x-reviews :review="$review" />
+    <x-blogcontent :content="$blogcontent" :auth="$author" :images="$images" :cat="$catname" />
     <x-footer />
 
 
