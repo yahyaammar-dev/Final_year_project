@@ -96,6 +96,7 @@ class DestinationSingle extends Controller
         $productItem = [];
         for($i=0; $i<count($products); $i++){            
             $data = product::select('id','name','description','price','type')->where('id',$products[$i]["product"])->get();
+            
             $imageId = ProductImages::select('images')->where('product',$data[0]['id'])->get();
             $image = Images::select('url')->where('images_id',$imageId[0]["images"])->get();
                     

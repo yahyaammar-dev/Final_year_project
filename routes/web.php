@@ -27,6 +27,8 @@ use App\Http\Controllers\bloglisting;
 use App\Http\Controllers\freelancerdetail;
 use App\Http\Controllers\productdetail;
 use App\Http\Controllers\BlogDetail;
+use App\Http\Controllers\addtocart;
+use App\Http\Controllers\calculatecart;
 
 
 Route::get('signup',function (){
@@ -191,3 +193,6 @@ Route::get('productdetail/{unique}', [productdetail::class,'productdetail']);
 
 Route::get('blogdetail/{unique}', [BlogDetail::class,'BlogDetail']);
 
+Route::post('addtocart', [addtocart::class,'addtocart']);
+
+Route::get('cart', [calculatecart::class,'calculatecart']);

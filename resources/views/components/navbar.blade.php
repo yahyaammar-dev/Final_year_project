@@ -5,5 +5,6 @@
         <a  class="navbar__listlink" href="http://localhost:8001/bloglisting"><li class="navbar__listitem">Blog</li></a>
         <a  class="navbar__listlink" href="http://localhost:8001/signup"><li class="navbar__listitem">Signup</li></a>
         <a  class="navbar__listlink" href="http://localhost:8001/contactdir"><li class="navbar__listitem">Directory</li></a>
+        <a  class="navbar__listlink" href="http://localhost:8001/cart"><li class="navbar__listitem">Cart</li></a>
     </ul>
 </div>

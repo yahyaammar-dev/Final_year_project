@@ -5,11 +5,12 @@
             <iframe width="560" height="315" src="<?php echo $videos[0][0]; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="videos__description">
+            <h1 class="videos__id">{{$ida}}</h1>
             <h1 class="videos__title">{{$dataa[0]['name']}}</h1>
             <h3 class="videos__date">{{$dataa[0]['description']}}</h3>
             <h3 class="videos__weather">{{$dataa[0]['price']}} 
             <h3 class="videos__city">{{$dataa[0]['type']}}</h3>
-            <button type="submit" class="submit">Add to Cart</button>
+            <button type="submit" class="addtocart submit">Add to Cart</button>
         </div>
     </div>
 
@@ -27,6 +28,8 @@
 
 
 
+
+
  
 </div>
     <script>
@@ -41,4 +44,26 @@
 <!-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh -->
 </section>
 
+
+
+
+<script>
+        $(document).ready(function() {
+            $(".addtocart").click(function() {
+            var id = $(".videos__id").text();
+            var type="freelancer";
+            let mydata = {id:id, type:type};
+            $.ajax({
+                url: "http://localhost:8001/addtocart",
+                method: "POST",
+                data: {
+                    info: mydata
+                },
+                success: function(data) {
+                console.log(data)
+                }
+            });
+            })
+        })
+    </script>
 

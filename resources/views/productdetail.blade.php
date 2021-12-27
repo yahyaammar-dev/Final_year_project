@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="{{URL::asset('css/vendor/slick/slick.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{URL::asset('css/vendor/slick/slick-theme.css')}}"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{{URL::asset('js/vendor/slick/slick.min.js')}}"></script>
     <link rel="stylesheet" href="{{URL::asset('css/main.css')}}">
 </head>
@@ -29,6 +30,9 @@
     <x-footer />
 
     
+
+
+
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
 
 </body>
