@@ -21,17 +21,19 @@ class calculatecart extends Controller
         $destinations = DB::table("cart")->where(["user_id"=>$id, "item_type"=>"destination"])->get();
         $des_id = [];
         foreach($destinations as $d){
-            array_push($des_id, $d->id);
+            array_push($des_id, $d->item_id);
         }
-        $products = DB::table("cart")->where(["user_id"=>$id, "item_type"=>"products"])->get();
+        $products = DB::table("cart")->where(["user_id"=>$id, "item_type"=>"product"])->get();
         $pro_id = [];
         foreach($products as $d){
-            array_push($pro_id, $d->id);
+            array_push($pro_id, $d->item_id);
         }
-        $freelancers = DB::table("cart")->where(["user_id"=>$id, "item_type"=>"freelancers"])->get();
+
+
+        $freelancers = DB::table("cart")->where(["user_id"=>$id, "item_type"=>"freelancer"])->get();
         $free_id = [];
         foreach($freelancers as $d){
-            array_push($free_id, $d->id);
+            array_push($free_id, $d->item_id);
         }
         
         //getting the data
@@ -50,12 +52,28 @@ class calculatecart extends Controller
             $row = DB::table("freelancer")->where(["id"=>$d])->get();
             array_push($freelancer_arr, $row);
         }
-        
+
+
+        $price = 0;
+
+        foreach($destinations_arr as $d){
+            $price = $price +  $d[0]->price;
+        }
+
+        foreach($products_arr as $d){
+            $price = $price + $d[0]->price;
+        }
+
+        foreach($freelancer_arr as $d){
+               $price = $price + $d[0]->price;
+        }
+
         //sending it to view
         return view("addtocart",[
             "destination"=>$destinations_arr,
             "product"=>$products_arr,
-            "freelancer"=>$freelancer_arr
+            "freelancer"=>$freelancer_arr,
+            "cost"=>$price
         ]);
     }
 }

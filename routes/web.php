@@ -29,6 +29,8 @@ use App\Http\Controllers\productdetail;
 use App\Http\Controllers\BlogDetail;
 use App\Http\Controllers\addtocart;
 use App\Http\Controllers\calculatecart;
+use App\Http\Controllers\deletecartitem;
+use App\Http\Controllers\test;
 
 
 Route::get('signup',function (){
@@ -196,3 +198,7 @@ Route::get('blogdetail/{unique}', [BlogDetail::class,'BlogDetail']);
 Route::post('addtocart', [addtocart::class,'addtocart']);
 
 Route::get('cart', [calculatecart::class,'calculatecart']);
+
+Route::post('deletecartitem', [deletecartitem::class,'deletecartitem']);
+
+Route::post('test', [test::class,'test']);

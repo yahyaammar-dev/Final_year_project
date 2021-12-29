@@ -6,6 +6,6 @@
         <h1>Google Map</h1>
     </div>
     <div class="transport__cost">
-        <h2 class="transport__costhead">Total Cost: 123 pkr</h2>
+        <h2 class="transport__costhead">Total Cost: {{$costs}} pkr</h2>
     </div>
 </div>

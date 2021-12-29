@@ -18,6 +18,17 @@
     <link rel="stylesheet" type="text/css" href="{{URL::asset('css/vendor/slick/slick-theme.css')}}"/>
     <script type="text/javascript" src="{{URL::asset('js/vendor/slick/slick.min.js')}}"></script>
     <link rel="stylesheet" href="{{URL::asset('css/main.css')}}">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+<style>
+
+#map {
+  height: 100%;
+}
+
+</style>
+
+
 </head>
 <body>
 

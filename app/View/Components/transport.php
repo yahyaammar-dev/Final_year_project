@@ -11,9 +11,12 @@ class transport extends Component
      *
      * @return void
      */
-    public function __construct()
+
+
+    public $costs;
+    public function __construct($costs)
     {
-        //
+        $this->costs = $costs;
     }
 
     /**

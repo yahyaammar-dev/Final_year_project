@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="map" class="map">
     
     <!-- No surplus words or unnecessary actions. - Marcus Aurelius -->
@@ -7,6 +19,9 @@
 
 
   
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBisMlMGdvkGnmlKZmqe2sUW1JajnCQPdI&callback=initMap"></script>
+
+
     
   
 
@@ -22,7 +37,4 @@
     }    
 
 </script>
-
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASBbUiwLFNlfD7VTbNxiODMx3jCv7qZ7M&callback=initMap"></script>
 
