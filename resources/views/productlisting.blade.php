@@ -20,6 +20,7 @@
 
 <?php $cz = "Products"; ?>
 
+
     <x-header />
     <x-banner :type ="$cz"/>
     <button class="sidebar__open" onclick="openNav()">☰</button> 

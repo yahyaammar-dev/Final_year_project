@@ -1,12 +1,22 @@
 .videosContainer{
     width: 90%;
     margin: 4rem auto;
+
+
+
+
+
+
     .videos{
+    
+    
         .videos__main{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             margin-bottom: 3rem;
+
             .videos__playing{
+                width: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -15,11 +25,89 @@
                 }
             }
             .videos__description{
+                width: 50%;
+                padding-left: 100px;
+                .videos__id{
+                    display: none;
+                }
+                .videos__type{
+                    font-style: italic;
+                    margin-top: 1rem;
+                }
                 .videos__title{
                     font-size: 40px;
                 }
+                .addtocart{
+                    margin-top: 3rem;
+                }
             }
         }
+
+
+
+        
+        @include phone(){
+            .videos__main{
+                .videos__playing{
+                    width: 90%;
+                    margin: auto;
+                }
+                .videos__description{
+                    width: 90%;
+                    margin: auto;
+                }
+            }
+        }
+
+        @include phonexl(){
+            .videos__main{
+                .videos__playing{
+                    width: 90%;
+                    margin: auto;
+                }
+                .videos__description{
+                    width: 90%;
+                    margin: auto;
+                }
+            }
+        }
+        
+        @include tab(){
+            .videos__main{
+                .videos__playing{
+                    width: 90%;
+                    margin: auto;
+                }
+                .videos__description{
+                    width: 90%;
+                    margin: auto;
+                }
+            }
+        }
+
+        @include tabxl(){
+            .videos__main{
+                .videos__playing{
+                    width: 90%;
+                    margin: auto;
+                }
+                .videos__description{
+                    width: 90%;
+                    margin: auto;
+                }
+            }
+        }
+
+
+
+
+
+
+
+        .videos__relatedvideos{
+            margin-bottom: 5rem;
+        }
+    
         .videos__secondary{
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -60,4 +148,5 @@
             }
         }
     }
+
 }

@@ -1,6 +1,9 @@
+<h1 class="blog__heading">Related Blogs</h1>
+
 <section class="blockscontainer">
 <div class="blocks blogblocks">
         <div class="blocks__list">
+
 
 
         <?php 
@@ -22,7 +25,6 @@
 
 
         </div>
-        <button type="submit" class="submit">Load More</button>
     </div>
 </section>
 
@@ -40,20 +42,16 @@
                 
                 console.log("clicked atleast")
                 let id = $(this).find(".blocks__id").text()
+                
                 let data = @json($blog);
                 
                 for(var i=0; i<data.length; i++){
                     if(id==data[i][0]["blog_id"]){
-                       
-                        /*
-                        $.ajax(
-                           
-                           url:"http://localhost:8001/blogdetail",
-                           success: function(data){
-                               console.log(data)
-                           }
-                        )
-                        */
+
+                        let url = "http://localhost:8001/blogdetail/" + id; 
+
+                        window.location.href = url;
+
                    }
                 }
             })

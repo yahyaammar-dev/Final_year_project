@@ -1,7 +1,4 @@
-
-
-
-
+<h1 class="relatedfreelancer__heading">Related freelancers</h1>
 
 <section class="blockscontainer">
     <div class="blocks">
@@ -11,13 +8,13 @@
  
         foreach($freelancer as $item){
             ?>
-            <div class="block">
+            <div class="blockfreelancer">
                 <?php
                 $url =  "images/" . $item["image"][0]["url"];
                 ?>
                 <img src="<?php echo $url; ?>" alt="" class="blocks__image">
                 <div class="block__info">
-                    <p class="blocks__id">   <?php  echo '<p>' . $item[0]["id"] . '</p>'; ?>  </p>
+                    <p class="blocks__id">   <?php  echo  $item[0]["id"] ; ?>  </p>
                     <p class="blocks__name"> <?php  echo '<p>' . $item[0]["name"] . '</p>'; ?>  </p>
                     <p class="blocks__description"> <?php   echo '<p>' . $item[0]["description"] . '</p>';   ?>  </p>
                     <p class="blocks__price"> <?php    echo '<p>' . $item[0]["price"] . '</p>';   ?>  </p>
@@ -43,17 +40,15 @@
   
 <script>
         $(document).ready(function(){
-            $(".block").click(function(){
+            $(".blockfreelancer").click(function(){
                 var id = $(this).find(".blocks__id").text();
-                $.ajax({
-                url: "http://localhost:8001/productdetail",
-                data: {
-                    id: id
-                },
-                success: function(data) {
-                    console.log(data)
-                }
-                });
+                console.log(id)
+                id = parseInt(id);
+                let  url =  "http://localhost:8001/freelancerdetail/"+id;
+                
+                window.location.href= url;
+
+         
             })
         })
 </script>

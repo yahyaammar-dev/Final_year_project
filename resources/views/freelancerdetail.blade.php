@@ -23,12 +23,14 @@
 <body>
 
 
+
     <x-header />
     <x-freelancerdetailvideo :ida="$id" :dataa="$data" :videos="$videos"/>
     <x-freelancerimages :images="$images" />
     <x-freelancerreviews :reviews="$review" />
     <x-footer />
 
+    
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
 
 </body>

@@ -1,56 +1,15 @@
-
-
 <div class="listing__main">
-    <x-sidebar />
     <div class="listing__content">
-
-    <?php
-
-
-    for($i=0; $i<count($abc["product"]); $i++){
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-?>
-
-
-
-
-
-
-
-
-
-
-
+    <?php for($i=0; $i<count($abc["product"]); $i++){ ?>
 
 <script>
-
-    
-
     var id = '<?php echo  $abc["product"][$i]['id']; ?>';
-
-
-
     $.ajax({
         url:"http://localhost:8001/Calculatereviews",
         data: {id: id},
         dataType: 'JSON',
         success: function(data){
-
             var rev = parseFloat(data['review']);
-
             if(rev>0 && rev<=0.5){
                 rev = 0.5;
             }
@@ -159,56 +118,49 @@
                             ele.innerHTML = "<i class=\"fas fa-star-half-alt\"></i>";
                         }
                     }
-
-
-
-
-
                 }
 
             }
-
-
-
-
         }
     });
 </script>
 
 
 
+    <div class="productsingle">
 
+        <div class="block">
+                <?php $url = "images/" . $abc["images"][$i][0]["url"];  ?>
 
+            <img src="<?php echo $url; ?>" alt="" class="blocks__image">
+            <div class="block__info">
+                <p class="blocks__id"><?php echo $abc["product"][$i]["id"]; ?></p>
+                <p class="blocks__title"><?php echo $abc["product"][$i]["name"];   ?></p>
+                <p class="blocks__price"> <?php       echo $abc["product"][$i]["description"];   ?></p>
+                <p class="blocks__category"> <?php       echo $abc["product"][$i]["price"];   ?></p>
+                <p class="blocks__region"> <?php       echo $abc["product"][$i]["type"];   ?></p>
+                <pre class="blocks__ratings"></pre>
+            </div>
+        </div>
 
-
-
-
-
-
-
-
-
-<div class="block">
-
-
-        <?php $url = "images/" . $abc["images"][$i][0]["url"];  ?>
-
-    <img src="<?php echo $url; ?>" alt="" class="blocks__image">
-    <div class="block__info">
-        <p class="blocks__id"><?php echo $abc["product"][$i]["id"]; ?></p>
-        <p class="blocks__title"><?php echo $abc["product"][$i]["name"];   ?></p>
-        <p class="blocks__price"> <?php       echo $abc["product"][$i]["description"];   ?></p>
-        <p class="blocks__category"> <?php       echo $abc["product"][$i]["price"];   ?></p>
-        <p class="blocks__region"> <?php       echo $abc["product"][$i]["type"];   ?></p>
-        <pre class="blocks__ratings"></pre>
     </div>
-</div>
 
 
+    <script>
 
+        $(document).ready(function(){
+            $(".productsingle").click(function(){
+                var id = $(this).find(".blocks__id").text();
+                console.log(id)
+                id = parseInt(id);
+                let  url =  "http://localhost:8001/productdetail/"+id;
+                
+                window.location.href= url;
 
+            })
+        })
 
-
+    </script>
 
 <?php 
 

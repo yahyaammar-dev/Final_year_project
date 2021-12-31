@@ -22,6 +22,7 @@
     <x-contactdir />
     <x-footer />
 
+    
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
 </body>
 </html>

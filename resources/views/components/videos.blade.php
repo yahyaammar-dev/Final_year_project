@@ -10,10 +10,10 @@
             <div class="videos__description">
                 <h1 class="videos__id">{{$dataa[$id-1]['destination_id']}}</h1>
                 <h1 class="videos__title">{{$dataa[$id-1]['name']}}</h1>
-                <h3 class="videos__date">{{$dataa[$id-1]['type']}}</h3>
-                <h3 class="videos__weather">{{$dataa[$id-1]['weather']}} - <span class="videos__weatherlive">05</span>°
-                    C</h3>
-                <h3 class="videos__city">{{$dataa[$id-1]['city']}}</h3>
+                <h5 class="videos__type">{{$dataa[$id-1]['type']}}</h5>
+                <h5 class="videos__weather">{{$dataa[$id-1]['weather']}} - <span class="videos__weatherlive">05</span>°
+                    C</h5>
+                <h5 class="videos__city">{{$dataa[$id-1]['city']}}</h5>
                 <p class="videos__descriptiontext">
                     {{$dataa[$id-1]['description']}}
                 </p>
@@ -24,6 +24,8 @@
         <script>
           $(document).ready(function() {
               $(".addtocart").click(function() {
+
+                console.log("I am clicked")
                 var id = $(".videos__id").text();
                 var type="destination";
                 let mydata = {id:id, type:type};
@@ -80,9 +82,9 @@
 
 
 
+            <h1 class="videos__relatedvideos">Related Videos</h1>
 
-
-        <div class="slider">
+        <div class="slider videos__slider">
             <?php 
             foreach($videos as $video){
                 ?>
@@ -98,12 +100,51 @@
         </div>
         <script>
         $('.slider').slick({
+            dots: true,
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
-            arrows: true
+            arrows: true,
+            responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 1000,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 700,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+
+
         });
         </script>
     </div>
     <!-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh -->
 </section>
+
+
+
+<script>
+
+$('.responsive').slick({
+
+
+});
+
+</script>

@@ -27,7 +27,7 @@
     <x-transport :costs="$cost"/>
     <x-downloadcart :destinations="$destination"/>
     <x-footer />
-
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
+
 </body>
 </html>

@@ -1,0 +1,32 @@
+.relatedblockscontainer{
+    .relatedblocks{
+        .relatedblocks__list{
+            display: flex;
+            flex-wrap: wrap;
+            .blocks__image{
+                width: 50%;
+            }
+            .block{
+                .blocks__id, .blocks__description, .blocks__price, .blocks__phone, .blocks__ratings{
+                    display: none;
+                }
+                &:hover{
+                    .block__info{
+                        position: absolute;
+                        background-color: white;
+                        width: 50%;
+                        bottom: 0;
+                        text-align: center;
+                        padding: 0rem;
+                        .blocks__id, .blocks__description, .blocks__price, .blocks__phone, .blocks__ratings{  
+                            display: block;
+                        }
+                        .blocks__title, .blocks__range, .blocks__price, .blocks__category{
+                            padding-bottom: 0.5rem;
+                        }
+                    }   
+                }
+            }
+        }
+    }
+}

@@ -26,7 +26,9 @@
   height: 100%;
 }
 
+
 </style>
+
 
 
 </head>
@@ -42,6 +44,7 @@
     <x-blogblocks :blog="$blog"/>
     <x-blockproductlist :product="$product"/>
     <x-blockhotellist :hotel="$hotel"/>
+
     <x-blockfreelancerlist :freelancer="$freelancer"/>
 
     <x-footer />

@@ -14,18 +14,62 @@
             }
         }
         .dodont__lists{
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
+
+
+            @include desktop(){
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+            @include large(){
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            @include phone(){
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                .dodont__listlist{
+                    width: 100%;
+                    padding-left: 100px;
+                }
+            }
+            @include phonexl(){
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                .dodont__listlist{
+                    width: 100%;
+                    padding-left: 100px;
+                }
+            }
+            @include tab(){
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                .dodont__listlist{
+                    width: 100%;
+                }
+            }
+            @include tabxl(){
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                .dodont__listlist{
+                    width: 50%;
+                }
+            }
+            
             .dodont__listlist{
                 list-style-type: none;
                 .dodont__listitem{
                     display: grid;
                     grid-template-columns: 10% 90%;
-                    .dodont__listitemicon{
-                        background-color: $secondary-color;
-                        padding: 10px;
-                        border-radius: 50%;
-                        color: white;
+                    .dodont__listitemiconcheck{
+                        color: green;
+                    }
+                    .dodont__listitemiconcross{
+                        color: red;
                     }
                 }
             }

@@ -1,4 +1,10 @@
-<section class="dodontContainer">
+<?php
+
+    if(!empty($laws)){
+
+
+?>
+        <section class="dodontContainer">
     <div class="dodont">
         <div class="dodont__info">
             <h1 class="dodont__head">Laws</h1>
@@ -7,14 +13,12 @@
         <div class="dodont__lists">
             <ul class="dodont__listlist">
                 <?php 
-
             foreach($laws as $law){
                 if($law[0]["type"]=="dos"){                      
             ?>
-
                 <li class="dodont__listitem">
                     <div class="dodont__listitemiconcont">
-                        <i class="dodont__listitemicon fas fa-bars"></i>
+                        <i class="dodont__listitemiconcheck fas fa-check"></i>
                     </div>
                     <div class="dodont__law">
                         <p>
@@ -25,32 +29,24 @@
                     </div>
                 </li>
                 <?php
-
                 }
             }
             ?>
             </ul>
-            
-            
             <ul class="dodont__listlist">
-            
-            
-            <?php 
-
+                <?php 
                 foreach($laws as $law){
-
                     if($law[0]["type"]=="donts"){
 ?>
-                        <li class="dodont__listitem">
-                        <div class="dodont__listitemiconcontcont">
-                            <i class="dodont__listitemicon fas fa-bars"></i>
-                        </div>
-                        <div class="dodont__law">
-    
-                            <p><?php echo $law[0]["content"] ?></p>
-                        </div>
-                    </li>
-            <?php   
+                <li class="dodont__listitem">
+                    <div class="dodont__listitemiconcontcont">
+                        <i class="dodont__listitemiconcross fas fa-skull-crossbones"></i>
+                    </div>
+                    <div class="dodont__law">
+                        <p><?php echo $law[0]["content"] ?></p>
+                    </div>
+                </li>
+                <?php   
 }
                 }
             ?>
@@ -59,3 +55,9 @@
     </div>
     <!-- No surplus words or unnecessary actions. - Marcus Aurelius -->
 </section>
+<?php
+
+    }
+
+?>
+

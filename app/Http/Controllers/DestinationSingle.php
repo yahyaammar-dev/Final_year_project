@@ -64,14 +64,14 @@ class DestinationSingle extends Controller
         $reviews = Destination_Reviews::select('review')->where('destination',$sid)->get();
         $reviewItem = [];
         for($i=0; $i<count($reviews); $i++){
-            $src = Reviews::select('author','text')->where('review_id',$reviews[$i]["review"])->get();
+            $src = Reviews::select('author','text','type','rating')->where('review_id',$reviews[$i]["review"])->get();
             $reviewItem[$i] = $src;
         }
         //Contacts of destinations
         $contacts = destination_contact::select('contact')->where('destination',$sid)->get();
         $contactItem = [];
         for($i=0; $i<count($reviews); $i++){
-            $src = contact::select('name','contact_no','type')->where('id',$contacts[$i]["contact"])->get();
+            $src = contact::select('name','contact_no','type','city','description')->where('id',$contacts[$i]["contact"])->get();
             $contactItem[$i] = $src;
         }
         //Blogs
