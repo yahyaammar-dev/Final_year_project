@@ -31,6 +31,7 @@ use App\Http\Controllers\addtocart;
 use App\Http\Controllers\calculatecart;
 use App\Http\Controllers\deletecartitem;
 use App\Http\Controllers\test;
+use App\Http\Controllers\submitreview;
 
 
 Route::get('signup',function (){
@@ -202,3 +203,5 @@ Route::get('cart', [calculatecart::class,'calculatecart']);
 Route::post('deletecartitem', [deletecartitem::class,'deletecartitem']);
 
 Route::post('test', [test::class,'test']);
+
+Route::post('submitreview', [submitreview::class,'submitreview']);

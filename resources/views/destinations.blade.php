@@ -34,19 +34,20 @@
 </head>
 <body>
 
+
+
+
     <x-header />
     <x-videos :id="$id" :dataa="$dataa" :videos="$videos"/>
     <x-images :images="$images" />
     <x-dodont :laws="$laws"/>
-    <x-reviews :review="$review" />
+    <x-reviews :id="$id" :review="$review" />
     <x-map :dataa="$dataa"/>
     <x-contactDir :contact="$contact"/>
     <x-blogblocks :blog="$blog"/>
     <x-blockproductlist :product="$product"/>
     <x-blockhotellist :hotel="$hotel"/>
-
     <x-blockfreelancerlist :freelancer="$freelancer"/>
-
     <x-footer />
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>

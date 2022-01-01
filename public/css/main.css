@@ -52,7 +52,7 @@ tbody {
 }
 
 .header .header__icons .header__search {
-  position: absolute;
+  position: static;
   right: 10px;
 }
 
@@ -65,7 +65,7 @@ tbody {
 }
 
 .header .header__icons .header__search .header__seachresult {
-  position: absolute;
+  position: static;
   top: 5vh;
 }
 
@@ -1849,6 +1849,19 @@ tbody {
 .reviews .reviews__listitem {
   width: 45%;
   margin: auto;
+}
+
+.reviews__form {
+  margin-bottom: 3rem;
+}
+
+.reviews__form .reviews__hidden {
+  display: none;
+}
+
+.reviews__form .reviews__center {
+  margin: auto;
+  width: 33%;
 }
 
 .map {

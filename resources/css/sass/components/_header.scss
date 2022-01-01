@@ -14,7 +14,7 @@
             cursor: pointer;
         }
         .header__search{
-            position: absolute;
+            position: static;
             right: 10px;
             .header__searchfieldn{
                 display: none;
@@ -23,7 +23,7 @@
                 display: block;
             }
             .header__seachresult{
-                position: absolute;
+                position: static;
                 top: 5vh;
             }
         }

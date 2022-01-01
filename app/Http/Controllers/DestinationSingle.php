@@ -70,7 +70,7 @@ class DestinationSingle extends Controller
         //Contacts of destinations
         $contacts = destination_contact::select('contact')->where('destination',$sid)->get();
         $contactItem = [];
-        for($i=0; $i<count($reviews); $i++){
+        for($i=0; $i<count($contacts); $i++){
             $src = contact::select('name','contact_no','type','city','description')->where('id',$contacts[$i]["contact"])->get();
             $contactItem[$i] = $src;
         }

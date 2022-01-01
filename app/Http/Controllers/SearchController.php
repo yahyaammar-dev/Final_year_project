@@ -19,7 +19,7 @@ class SearchController extends Controller
     {
     foreach ($products as $key => $product) {
     $output.='<tr>'.
-    '<td>'.$product->name.'</td>'.
+    '<td>'. '<p style="display: none;">' .$product->destination_id . '</p>' . $product->name.'</td>'.
     '</tr>';
     }
     return Response($output);
@@ -27,3 +27,5 @@ class SearchController extends Controller
        }
     }
 }
+
+

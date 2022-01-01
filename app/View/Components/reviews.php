@@ -12,9 +12,11 @@ class reviews extends Component
      * @return void
      */
     public $review;
-    public function __construct($review)
+    public $id;
+    public function __construct($review, $id)
     {
         $this->review = $review;
+        $this->id = $id;
     }
 
     /**

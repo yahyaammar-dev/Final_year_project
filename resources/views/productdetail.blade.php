@@ -26,7 +26,7 @@
     <x-header />
     <x-productdetailvideo :ida="$id" :dataa="$data" :videos="$videos"/>
     <x-productimages :images="$images" />
-    <x-productreviews :reviews="$review" />
+    <x-productreviews :id="$id" :reviews="$review" />
     <x-footer />
 
     

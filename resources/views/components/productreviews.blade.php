@@ -13,6 +13,85 @@
 
 <h1 class="productreviews__head">Reviews</h1>
 
+
+<?php 
+    
+    $user = session('user');
+    if(isset($user)){
+     
+      
+      ?>
+
+
+      
+
+      <form method="POST" class="reviews__form" action="http://localhost:8001/submitreview">
+
+      <div class="reviews__center">        
+        <input type="text" name="id" class="id reviews__hidden"/>
+        <input type="text" name="type" value="product" class="destination reviews__hidden"/>
+        <label for="content">Text</label>
+        <input type="text" name="content" /><br>
+        <label for="rating">Rating</label>
+        <input type="range" name="rating" min="0" max="5"/><br>
+        <input type="text" name="author" class="reviews__hidden author" step="0.5"/><br>
+        <input type="text" name="email" class="reviews__hidden email"/><br>
+        <input type="submit" name="submit" value="submit" class="submit" />
+      </div>
+
+   
+
+      </form>
+
+
+      <?php
+    }
+  
+
+?>
+
+
+<script>
+
+      $(document).ready(function(){
+        
+          let data = @json($user);
+          let name = data["name"]
+          let email = data["email"]
+
+          let id = @json($id);
+
+
+          $(".author").val(name)
+          $(".email").val(email)
+          $(".id").val(id)
+    
+      })    
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="reviews slidert">
 
 
@@ -54,5 +133,18 @@
 
         });
         </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -19,6 +19,43 @@
     <link rel="stylesheet" href="{{URL::asset('css/vendor/FontAwesome/Fontawesomecss/all.css')}}">
 </head>
 
+
+
+
+<script>
+
+
+
+
+function abc(){
+
+
+
+
+let blocks = $(".block");
+    for(let i=0; i<blocks.length; i++){
+        blocks[i].addEventListener('click',function(){
+            let ide = this.querySelector(".blocks__id").textContent
+            $.ajax({
+                url:"http://localhost:8001/saveid",
+                data:{id:ide},
+                success: function(data){
+                    window.location.replace("http://localhost:8001/destinations");
+                }
+            });
+        });
+    }
+
+
+}
+
+
+
+
+</script>
+
+
+
 <body>
 
 
@@ -103,13 +140,9 @@
                                     }
                                     else{
                                         rev =0;
-                                    }
-
-                                   
+                                    }                                   
 
                                     let ide = data['id'];
-
-                                   
 
                                     let allItem = $('.blocks__id');
 
@@ -215,6 +248,31 @@
                                 </div>
                             </div>
                             `);
+                            
+
+
+
+
+                            let blocks = $(".block");
+        for(let i=0; i<blocks.length; i++){
+            blocks[i].addEventListener('click',function(){
+                let ide = this.querySelector(".blocks__id").textContent
+                $.ajax({
+                    url:"http://localhost:8001/saveid",
+                    data:{id:ide},
+                    success: function(data){
+                        window.location.replace("http://localhost:8001/destinations");
+                    }
+                });
+            });
+        }
+
+
+
+
+
+
+
                             }
                         });
                     });
@@ -225,5 +283,48 @@
 
     </script>
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
+
+
+    <script>
+
+function abc(){
+
+
+    console.log("I am calllllllllllllllllllllled")
+
+
+    let blocks = $(".block");
+        for(let i=0; i<blocks.length; i++){
+            blocks[i].addEventListener('click',function(){
+                let ide = this.querySelector(".blocks__id").textContent
+                $.ajax({
+                    url:"http://localhost:8001/saveid",
+                    data:{id:ide},
+                    success: function(data){
+                        window.location.replace("http://localhost:8001/destinations");
+                    }
+                });
+            });
+        }
+
+}
+
+    
+    let blocks = $(".block");
+        for(let i=0; i<blocks.length; i++){
+            blocks[i].addEventListener('click',function(){
+                let ide = this.querySelector(".blocks__id").textContent
+                $.ajax({
+                    url:"http://localhost:8001/saveid",
+                    data:{id:ide},
+                    success: function(data){
+                        window.location.replace("http://localhost:8001/destinations");
+                    }
+                });
+            });
+        }
+
+    </script>
+
 </body>
 </html>

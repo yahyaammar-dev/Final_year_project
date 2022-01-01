@@ -26,7 +26,7 @@
     <x-header />
     <x-hoteldetailvideo :ida="$id" :dataa="$data" :videos="$videos"/>
     <x-hotelimages :images="$images"/>
-    <x-hotelreviews :reviews="$review" />
+    <x-hotelreviews :id="$id" :reviews="$review" />
     <x-footer />
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
