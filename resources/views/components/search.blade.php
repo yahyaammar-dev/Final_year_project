@@ -7,10 +7,9 @@
                 <div class="form-group header__search">
                     <input type="text" autocomplete="off" class="form-controller header__searchfield header__searchfieldn" id="search" name="search" ></input>
                 </div>
-                <table class="table table-bordered table-hover header__seachresult header__searchfieldn">
-                    <tbody>
-                    </tbody>
-                </table>
+                <div class="mydiv">
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -47,26 +46,44 @@ function doneTyping () {
             'search': value
         },
         success: function(data) {
-            $('tbody').html(data);
-            $('table').click(function(){     
+
+            
+            let i=0;
+            let arr = [];
+            $(data).each(function(){
+                let id =  $(this)[0]["destination_id"]
+                let name = $(this)[0]["name"]
+                let temp = [id, name]
+                i++
+                arr[i]= temp;
             })
 
 
+            let output;
+            for(i=0; i<arr.length-1; i++){
+                output = output + ('<p>'+arr[i+1]+'</p>')          
+            }
 
-            $("table").on('click',function(){
-         
-         var currentRow=$(this).closest("tr"); 
+            $(".mydiv").html(output)
 
-         var tds = currentRow.find("td");
+            let eles = document.querySelectorAll(".mydiv p")
+
+            for(let i =0; i<eles.length; i++){
+               eles[i].addEventListener("click", function(){
+                   let text = eles[i].innerHTML;
+                   let ide = parseInt(text[0])
+
+                   $.ajax({
+                    url:"http://localhost:8001/saveid",
+                    data:{id:ide},
+                    success: function(data){
+                        window.location.replace("http://localhost:8001/destinations");
+                    }
+                });
 
 
-         console.log(tds.text())
-
-        
-    });
-
-
-
+               });
+            }
 
         }
     });

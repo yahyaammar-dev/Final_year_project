@@ -32,6 +32,9 @@ use App\Http\Controllers\calculatecart;
 use App\Http\Controllers\deletecartitem;
 use App\Http\Controllers\test;
 use App\Http\Controllers\submitreview;
+use App\Http\Controllers\writeblog;
+use App\Http\Controllers\saveblog;
+use App\Http\Controllers\userstories;
 
 
 Route::get('signup',function (){
@@ -140,9 +143,6 @@ Route::get('addproduct',function (){
     return view("addproduct");
 });
 
-Route::get('writeblog',function (){
-    return view("writeblog");
-});
 
 Route::post('signup',[Userin::class,'insertUser']);
 
@@ -205,3 +205,11 @@ Route::post('deletecartitem', [deletecartitem::class,'deletecartitem']);
 Route::post('test', [test::class,'test']);
 
 Route::post('submitreview', [submitreview::class,'submitreview']);
+
+Route::get('writeblog',function (){
+    return view("writeblog");
+});
+
+Route::post('saveblog', [saveblog::class, 'saveblog']);
+
+Route::get('userstories',[userstories::class, 'userstories']);

@@ -29,3 +29,23 @@
     ?>
     </div>
 </div>
+
+
+
+
+
+<script>
+        $(document).ready(function(){
+            $(".block").click(function(){
+                
+                console.log("clicked atleast")
+                let id = $(this).find(".blocks__id").text()
+                
+                
+                let url = "http://localhost:8001/blogdetail/" + id; 
+                window.location.href = url;
+            })
+        })
+        
+</script>
+

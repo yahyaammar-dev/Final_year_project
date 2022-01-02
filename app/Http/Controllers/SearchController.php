@@ -15,14 +15,17 @@ class SearchController extends Controller
     {
     $output="";
     $products=DB::table('destinations')->where('name','LIKE','%'.$request->search."%")->get();
+    
+    $arr = [];
+    
     if($products)
     {
     foreach ($products as $key => $product) {
-    $output.='<tr>'.
-    '<td>'. '<p style="display: none;">' .$product->destination_id . '</p>' . $product->name.'</td>'.
-    '</tr>';
+     
+        $arr[] = $product;
+
     }
-    return Response($output);
+    return Response($arr);
        }
        }
     }
