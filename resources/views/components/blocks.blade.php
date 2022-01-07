@@ -35,7 +35,7 @@
 
 <?php
             }
-            else if($dest[0]['type']=='Shoes' || $dest[0]['type']=='Apparel'){
+            else if($dest[0]['type']=='Hat' || $dest[0]['type']=='Apparel'){
                 ?>
 
 <div class="nintycenter">

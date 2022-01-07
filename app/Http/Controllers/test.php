@@ -32,6 +32,12 @@ class test extends Controller
             $data = $data . '<p>' . json_encode($contact[0]) . '</p>';
         }
 
+        $data = $data . '<h1>' . 'Fuel Details' . '</h1>';
+
+        $data = $data .  $_POST["div1"];
+        $data  = $data . '<br>';
+        $data = $data .  $_POST["div2"];
+
         $pdf = App::make('dompdf.wrapper');
         $pdf->loadHTML($data);
         return $pdf->stream();

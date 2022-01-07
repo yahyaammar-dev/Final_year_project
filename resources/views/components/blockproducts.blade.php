@@ -4,7 +4,7 @@
                 <div class="block__info">
                     <p class="blocks__id">{{$dest['id']}}</p>
                     <p class="blocks__name">{{$dest['name']}}</p>
-                    <p class="blocks__description">{{$dest['description']}} pkr</p>
+                  
                     <p class="blocks__price">{{$dest['price']}}</p>
                     <p class="blocks__phone">{{$dest['type']}}</p>
                     <pre class="blocks__ratings"></pre>

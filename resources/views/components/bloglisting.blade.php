@@ -1,7 +1,6 @@
 
 
 <div class="listing__main">
-    <x-sidebar />
     <div class="listing__content">
 
     <?php

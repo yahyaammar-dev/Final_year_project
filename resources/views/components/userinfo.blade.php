@@ -14,3 +14,6 @@
         </div>
     </div>
 </section>
+
+
+<?php echo $productqw; ?>

@@ -35,6 +35,7 @@ use App\Http\Controllers\submitreview;
 use App\Http\Controllers\writeblog;
 use App\Http\Controllers\saveblog;
 use App\Http\Controllers\userstories;
+use App\Http\Controllers\CheckoutController;
 
 
 Route::get('signup',function (){
@@ -213,3 +214,7 @@ Route::get('writeblog',function (){
 Route::post('saveblog', [saveblog::class, 'saveblog']);
 
 Route::get('userstories',[userstories::class, 'userstories']);
+
+Route::get('checkout',[CheckoutController::class, 'checkout']);
+
+Route::post('checkout',[CheckoutController::class, 'afterpayment']);

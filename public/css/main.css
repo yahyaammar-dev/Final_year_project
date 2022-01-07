@@ -28,6 +28,10 @@ tbody {
   margin: auto;
 }
 
+.carousel-caption {
+  bottom: 42%;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -505,6 +509,10 @@ tbody {
   width: 100%;
 }
 
+.images {
+  margin-top: 7rem;
+}
+
 .images .images__image {
   height: 100vh;
 }
@@ -669,7 +677,7 @@ tbody {
 }
 
 .blockscontainer .blocks .blocks__list .blocks__item .blocks__image {
-  width: 50%;
+  width: 100%;
 }
 
 .blockscontainer .blocks .blocks__list .blocks__item .blocks__title {
@@ -1070,6 +1078,14 @@ tbody {
   border-radius: 50%;
 }
 
+.addtocart__destination {
+  display: none;
+}
+
+.sendcheckoutdata {
+  display: none;
+}
+
 .cartitemcontainer {
   margin: 1rem 0;
 }
@@ -1278,6 +1294,17 @@ tbody {
 .contactdir__contact .contactdir__contactthird .contactdir__itemrating {
   margin: 0;
   padding: 0;
+}
+
+.hero .hero__head {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.hero .hero__paragrapgh {
+  width: 60%;
+  margin: auto;
+  margin-top: 1rem;
 }
 
 /* This section is imported from unboxing pakistan blog and does not use BEM model */
@@ -1561,7 +1588,7 @@ tbody {
     padding-top: 0;
   }
   .gallery {
-    margin-bottom: 55rem;
+    margin-bottom: 0;
   }
   .gallery .container {
     width: 100%;
@@ -2145,16 +2172,24 @@ tbody {
   height: 100%;
 }
 
+.relatedblockscontainer {
+  width: 90%;
+  margin: 0 auto 2rem;
+}
+
 .relatedblockscontainer .relatedblocks .relatedblocks__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .relatedblockscontainer .relatedblocks .relatedblocks__list .blocks__image {
-  width: 50%;
+  width: 100%;
 }
 
 .relatedblockscontainer .relatedblocks .relatedblocks__list .block .blocks__id, .relatedblockscontainer .relatedblocks .relatedblocks__list .block .blocks__description, .relatedblockscontainer .relatedblocks .relatedblocks__list .block .blocks__price, .relatedblockscontainer .relatedblocks .relatedblocks__list .block .blocks__phone, .relatedblockscontainer .relatedblocks .relatedblocks__list .block .blocks__ratings {

@@ -16,7 +16,6 @@
                 <div class="block__info">
                     <p class="blocks__id">   <?php  echo  $item[0]["id"] ; ?>  </p>
                     <p class="blocks__name"> <?php  echo '<p>' . $item[0]["name"] . '</p>'; ?>  </p>
-                    <p class="blocks__description"> <?php   echo '<p>' . $item[0]["description"] . '</p>';   ?>  </p>
                     <p class="blocks__price"> <?php    echo '<p>' . $item[0]["price"] . '</p>';   ?>  </p>
                     <p class="blocks__phone">   <?php   echo '<p>' . $item[0]["phone"] . '</p>';   ?>    </p>
                     <pre class="blocks__ratings"></pre>

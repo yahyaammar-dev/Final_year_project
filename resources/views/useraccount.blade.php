@@ -10,14 +10,12 @@
 </head>
 <body>
 
-
-
-
     <x-header />
-    <x-userinfo :user="$user" />
+    <x-userinfo :user="$user" :productqw="$product"/>
     <!-- Two blocks -->
     <x-footer />
 
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
+
 </body>
 </html>

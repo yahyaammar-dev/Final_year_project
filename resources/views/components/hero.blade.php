@@ -17,9 +17,8 @@
     <div class="carousel-item active">
       <img class="d-block w-100" src="{{URL::asset('/images/signup-bg.jpg')}}" alt="First slide">
         <div class="carousel-caption d-none d-md-block">
-         <h5>Hello World!</h5>
-         <p>This is a paragrapgh</p>
-         <a href="http://localhost:8001/destinationlisting"><button class="submit">Start Exploring More</button></a>
+         <h1 class="hero__head">Natural Beauty</h1>
+         <p class="hero__paragrapgh">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
     </div>
     
@@ -28,9 +27,8 @@
     <div class="carousel-item">
       <img class="d-block w-100" src="{{URL::asset('/images/signup-bg.jpg')}}" alt="First slide">
         <div class="carousel-caption d-none d-md-block">
-         <h5>Hello World!</h5>
-         <p>This is a paragrapgh</p>
-         <a href="http://localhost:8001/destinationlisting"><button class="submit">Start Exploring More</button></a>
+         <h1 class="hero__head">Tasty Food</h1>
+         <p class="hero__paragrapgh">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sunt in culpa qui officia deserunt mollit anim id est laborum."</p> 
         </div>
     </div>
 
@@ -38,9 +36,8 @@
       <div class="carousel-item">
       <img class="d-block w-100" src="{{URL::asset('/images/signup-bg.jpg')}}" alt="First slide">
         <div class="carousel-caption d-none d-md-block">
-         <h5>Hello World!</h5>
-         <p>This is a paragrapgh</p>
-         <a href="http://localhost:8001/destinationlisting"><button class="submit">Start Exploring More</button></a>
+         <h1 class="hero__head">Amazing People</h1>
+         <p class="hero__paragrapgh">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
     </div>
 

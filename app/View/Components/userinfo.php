@@ -12,10 +12,12 @@ class userinfo extends Component
      * @return void
      */
     public $user;
+    public $productqw;
 
-    public function __construct($user)
+    public function __construct($user, $productqw)
     {
         $this->user = $user;
+        $this->productqw = $productqw;
     }
 
     /**

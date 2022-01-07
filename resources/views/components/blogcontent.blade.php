@@ -1,5 +1,5 @@
 <div class="blogcontent__main">
-    <x-sidebar />
+   
     <div class="blogcontent__article">
 
         <h1><?php echo $content[0]["name"]; ?></h1>

@@ -22,7 +22,7 @@
     <?php $cz="Blogs"; ?>
     <x-header />
     <x-banner :type="$cz" />
-    <button class="sidebar__open" onclick="openNav()">☰</button> 
+  
     <x-bloglisting :abc="$data"/>
     <x-footer />
 

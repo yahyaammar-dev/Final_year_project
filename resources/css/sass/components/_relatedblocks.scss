@@ -1,10 +1,13 @@
 .relatedblockscontainer{
+    width: 90%;
+    margin: 0 auto 2rem;
     .relatedblocks{
         .relatedblocks__list{
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
             .blocks__image{
-                width: 50%;
+                width: 100%;
             }
             .block{
                 .blocks__id, .blocks__description, .blocks__price, .blocks__phone, .blocks__ratings{

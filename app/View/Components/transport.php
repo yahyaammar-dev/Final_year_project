@@ -14,9 +14,11 @@ class transport extends Component
 
 
     public $costs;
-    public function __construct($costs)
+    public $destinations;
+    public function __construct($costs, $destinations)
     {
         $this->costs = $costs;
+        $this->destinations = $destinations;
     }
 
     /**

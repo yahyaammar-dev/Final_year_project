@@ -32,6 +32,7 @@ class bloglisting extends Controller
         
 
 
+        
         $data['blog']= $src ;
         $data['images'] = $images;
     

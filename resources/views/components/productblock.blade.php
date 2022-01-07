@@ -2,7 +2,6 @@
     <!-- Simplicity is the essence of happiness. - Cedric Bledsoe -->
 </div>
 
-
 <div>
     <!-- Simplicity is an acquired taste. - Katharine Gerould -->
 </div>
@@ -12,14 +11,37 @@
 </div>
 
 
+
+
+
+
+
+
+
+
 <?php
 
 
-    foreach($products as $d){
-        
-        
-?>
 
+     echo '<h1>' . json_encode($products) . '</h1>'; ?>
+
+
+<?php
+
+
+
+    $phparr = [];
+    $i=0;
+
+    foreach($products as $d){   
+  
+            echo json_encode($d[0]);
+
+            $phparr[$i] =$d[0]->id;
+            $i++;
+
+
+?>
 
 
 <section class="cartitemcontainer">
@@ -52,4 +74,25 @@
     }
 
 
+    $List = implode(', ', $phparr);
+  
+  
+
+    // Display the comma separated list
+
+    echo '<p class="mylist">' . $List . '</p>';
+
+
 ?>
+
+
+
+<script>
+
+    var arr;
+
+    arr = $(".mylist").html() 
+
+
+
+</script>

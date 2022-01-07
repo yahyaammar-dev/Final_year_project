@@ -13,10 +13,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{URL::asset('css/main.css')}}">
     <link rel="stylesheet" href="{{URL::asset('css/vendor/FontAwesome/Fontawesomecss/all.css')}}">
-
 </head>
 <body>
-    
+        
+
+
+
+
     <?php $title = "cart"; ?>
     <x-header />
     <x-banner :type="$title"/>
@@ -24,7 +27,7 @@
     <x-freelancerblock :freelancers="$freelancer"/>
     <h1>Products</h1>
     <x-productblock :products="$product"/>
-    <x-transport :costs="$cost"/>
+    <x-transport :destinations="$destination" :costs="$cost"/>
     <x-downloadcart :destinations="$destination"/>
     <x-footer />
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
