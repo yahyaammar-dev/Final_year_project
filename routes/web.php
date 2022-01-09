@@ -36,6 +36,9 @@ use App\Http\Controllers\writeblog;
 use App\Http\Controllers\saveblog;
 use App\Http\Controllers\userstories;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\SingleUserStory;
+use App\Http\Controllers\visac;
+use App\Http\Controllers\productdetailgetter;
 
 
 Route::get('signup',function (){
@@ -218,3 +221,10 @@ Route::get('userstories',[userstories::class, 'userstories']);
 Route::get('checkout',[CheckoutController::class, 'checkout']);
 
 Route::post('checkout',[CheckoutController::class, 'afterpayment']);
+
+Route::get('userstotydetail/{unique}', [SingleUserStory::class,'SingleUserStory']);
+
+Route::post('visac', [visac::class,'visac']);
+
+Route::post('productdetailgetter', [productdetailgetter::class,'productdetailgetter']);
+

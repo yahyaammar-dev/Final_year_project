@@ -37,7 +37,6 @@ class CheckoutController extends Controller
 
     public function afterPayment(REQUEST $req)
     {
-        echo 'Payment Has been Received';
 
         $user = session("user");
         $products = $_POST["products"];
@@ -48,6 +47,9 @@ class CheckoutController extends Controller
         $add->user_id = $user->id;
         $add->product_ids = $products;
         $add->save(); 
+
+
+        return view("afterpayment");
 
     }
 }

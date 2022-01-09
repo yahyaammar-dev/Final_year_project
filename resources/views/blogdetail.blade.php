@@ -23,6 +23,7 @@
 
     <?php $catname=  $category[0]["name"]; ?>
 
+    
     <x-header />
     <x-blogcontent :content="$blogcontent" :auth="$author" :images="$images" :cat="$catname" />
     <x-footer />

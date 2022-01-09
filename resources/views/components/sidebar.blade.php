@@ -24,11 +24,11 @@
 <section class="sidebarcontainer" id="mySidebar">
     <div class="sidebar">
         <a href="javascript:void(0)" class="sidebar__closebtn" onclick="closeNav()">×</a>
-        <h2 class="sidebar__main">All Products</h2>
+        <h4 class="sidebar__main">All Products</h4>
         <div class="sidebar__listcont">
-            <div class="sidebar__title">
-                <h4 class="sidebar__listhead">Region</h4>
-                <i class="fas fa-chevron-down sidebar__regiondrop"></i>
+            <div class="sidebar__title sidebar__regiondrop">
+                <b><p class="sidebar__listhead">Region</p></b>
+                <i class="fas fa-chevron-down"></i>
             </div>
             <ul class="sidebar__list sidebar__regioncontent">
                 <li class="sidebar__listitem">
@@ -50,9 +50,9 @@
             </ul>
         </div>
         <div class="sidebar__listcont">
-            <div class="sidebar__title">
-                <h4 class="sidebar__listhead">Weather</h4>
-                <i class="fas fa-chevron-down sidebar__weatherdrop"></i>
+            <div class="sidebar__title sidebar__weatherdrop">
+                <b><p class="sidebar__listhead">Weather</p></b>
+                <i class="fas fa-chevron-down"></i>
             </div>
             <ul class="sidebar__list sidebar__weathercontent">
                 <li class="sidebar__listitem">
@@ -70,9 +70,9 @@
             </ul>
         </div>
         <div class="sidebar__listcont">
-            <div class="sidebar__title">
-                <h4 class="sidebar__listhead">Type</h4>
-                <i class="fas fa-chevron-down sidebar__typedrop"></i>
+            <div class="sidebar__title sidebar__typedrop">
+                <b><p class="sidebar__listhead">Type</p></b>
+                <i class="fas fa-chevron-down"></i>
             </div>
             <ul class="sidebar__list sidebar__typecontent">
                 <li class="sidebar__listitem">

@@ -1,0 +1,21 @@
+.stories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2.5rem auto;
+    .stories__card{
+        background-color: bisque;
+        width: 45%;
+        margin: 10px;
+        padding: 2rem;
+    }
+}
+
+
+.singleuserstory{
+    width: 80%;
+    margin: 5rem auto;
+    .heading{
+        margin-bottom: 3rem;
+    }
+}

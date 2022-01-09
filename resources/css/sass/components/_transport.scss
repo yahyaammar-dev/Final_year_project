@@ -2,3 +2,19 @@
     text-align: center;
     margin: 4rem 0;
 }
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    .downloadcontactdir{
+        margin-left: 10px;
+    }
+    .movetocheckout{
+        margin-right: 10px;
+    }
+}
+
+
+.mylist{
+    display: none;
+}

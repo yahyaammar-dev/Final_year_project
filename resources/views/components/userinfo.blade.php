@@ -16,4 +16,53 @@
 </section>
 
 
-<?php echo $productqw; ?>
+<section class="pastorders">
+
+
+
+</section>
+
+
+<script>
+
+    let eles;
+    let i=0; 
+    let ids;
+
+</script>
+
+
+<?php 
+
+
+    for($i=0; $i<count($productqw); $i++){
+        echo $productqw[$i]."<br/>";
+
+
+?>
+        <script>
+                eles = <?php echo $productqw[$i]; ?>;
+                ids = eles["product_ids"].split(",")
+                var parent = document.querySelector(".pastorders");
+                var html = `<div class="order"> 
+                    <h1>Order:</h1>
+                `;
+                for(let l=0; l<ids.length; l++){
+                    $.ajax({
+                        url:"http://localhost:8001/productdetailgetter/",
+                        method: "POST",
+                        data: {"proid": ids[l]},
+                        success: function(data){
+                            console.log(data)
+                            html = html + data;
+                        }
+                    })
+                }
+                html = html + `</div>`;
+                console.log(html)
+        </script>
+<?php 
+    }
+?>
+
+

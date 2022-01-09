@@ -1,4 +1,4 @@
-<section class="videosContainer">
+<section class="videosContainer hoteldetailvideo">
 <div class="videos">
     <div class="videos__main">
         <div class="videos__playing">

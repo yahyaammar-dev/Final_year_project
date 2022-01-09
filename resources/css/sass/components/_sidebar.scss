@@ -5,11 +5,12 @@
         position: fixed;
         z-index: 1;
         top: 0;
-        left: 0;
-        background-color: #111;
+        left: -1rem;
+        background-color: #cad5e8;
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
+        padding-left: 1rem;
     }
     @include phonexl{
         height: 100%;
@@ -17,11 +18,12 @@
         position: fixed;
         z-index: 1;
         top: 0;
-        left: 0;
-        background-color: #111;
+        left: -1rem;
+        background-color: #cad5e8;
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
+        padding-left: 1rem;
     }
     @include tab{
             height: 100%;
@@ -29,11 +31,12 @@
             position: fixed;
             z-index: 1;
             top: 0;
-            left: 0;
-            background-color: #111;
+            left: -1rem;
+            background-color: #cad5e8;
             overflow-x: hidden;
             transition: 0.5s;
             padding-top: 60px;
+            padding-left: 1rem;
     }
     .sidebar{
         margin-right: 2rem;
@@ -75,6 +78,7 @@
                 display: flex; 
                 justify-content: space-between;
                 align-items: center;
+                cursor: pointer;
             }
             .sidebar__list{
                 padding: 0;

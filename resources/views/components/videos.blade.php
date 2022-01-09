@@ -21,6 +21,7 @@
             </div>
         </div>
 
+        
         <script>
           $(document).ready(function() {
               $(".addtocart").click(function() {

@@ -14,8 +14,6 @@ class Useraccount extends Controller
 
         $user = session('user');
 
-        echo $user;
-
         $products = orders::select('product_ids')->where('user_id',$user['id'])->get();
 
         return view('useraccount',['user'=>$user, 'product'=>$products]);

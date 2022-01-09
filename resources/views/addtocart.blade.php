@@ -16,21 +16,20 @@
 </head>
 <body>
         
-
-
-
-
     <?php $title = "cart"; ?>
     <x-header />
     <x-banner :type="$title"/>
-    <x-destinationblock :destinations="$destination"/>
-    <x-freelancerblock :freelancers="$freelancer"/>
-    <h1>Products</h1>
-    <x-productblock :products="$product"/>
-    <x-transport :destinations="$destination" :costs="$cost"/>
-    <x-downloadcart :destinations="$destination"/>
+
+    <div class="cartcontainer">
+        <x-destinationblock :destinations="$destination"/>
+        <x-freelancerblock :freelancers="$freelancer"/>
+        <h1>Products</h1>
+        <x-productblock :products="$product"/>
+        <x-transport :destinations="$destination" :costs="$cost"/>
+        <x-downloadcart :destinations="$destination"/>
+    </div>
+    
     <x-footer />
     <script src="{{URL::asset('js/hamburger.js')}}"></script>
-
 </body>
 </html>

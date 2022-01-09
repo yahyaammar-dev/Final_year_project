@@ -1,6 +1,6 @@
 
 
-<div class="listing__main">
+<div class="listing__main bloglisting">
     <div class="listing__content">
 
     <?php

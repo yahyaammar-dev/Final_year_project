@@ -6,22 +6,73 @@
     display: none;
 }
 
+.cartcontainer{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .cartitemcontainer{
     margin: 1rem 0;
+    width: 100%;
     .cartitem{
         width: 60%;
         position: relative;
-        margin: auto;
+     
+     
+        @include large(){
+            margin: auto;    
+        }
+        @include desktop(){
+            margin: auto;
+        }
+        @include tabxl(){
+            margin: auto;
+        }
+        @include tab(){
+
+        }
+        @include phonexl(){
+
+        }
+     
+
+        
+     
+     
+     
         .cartitem__close{
             position: absolute;
-            right: 0;
             font-size: 30px;
+
+            @include large(){
+                right:0;
+            }
+            @include desktop(){
+                right: 0;
+            }
+            @include tabxl(){
+                right: 0;
+            }
+
         }
         .cartitem__content{
             display: flex;
             align-items: center;
             .cartitem__info{
                 padding: 0 0 0 1rem;
+            }
+            @include phone(){
+                .cartitem__image{
+                    width: 77%;
+                }
+            }
+            @include phonexl(){
+                .cartitem__image{
+                    width: 77%;
+                }
             }
         }
     }
