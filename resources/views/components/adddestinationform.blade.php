@@ -2,6 +2,7 @@
     <form class="adddestinationform">
         @csrf
 
+
         <h1 class="adddestinationform__heading">Videos</h1>
         <div class="item">
             <i class="fa fa-user adddestinationform__icon"></i>
@@ -317,7 +318,6 @@
 
 
 
-        </div>
 
 
 
@@ -378,7 +378,7 @@
     <!-- Knowing is not enough; we must apply. Being willing is not enough; we must do. - Leonardo da Vinci -->
 </div>
 
-
+        </div>
 
 <script>
 // creating a list of videos

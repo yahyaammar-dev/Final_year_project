@@ -228,3 +228,4 @@ Route::post('visac', [visac::class,'visac']);
 
 Route::post('productdetailgetter', [productdetailgetter::class,'productdetailgetter']);
 
+

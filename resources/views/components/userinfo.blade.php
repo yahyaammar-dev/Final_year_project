@@ -18,8 +18,6 @@
 
 <section class="pastorders">
 
-
-
 </section>
 
 
@@ -35,34 +33,39 @@
 <?php 
 
 
-    for($i=0; $i<count($productqw); $i++){
-        echo $productqw[$i]."<br/>";
+ 
 
+    for($i=0; $i<count($productqw); $i++){
+       
+        $heading =  '<h1>' . "Order: " . '</h1>';
+
+        echo $heading;
+        $arr = $productqw[$i]["product_ids"];
+
+        $arr = explode (",", $arr); 
+
+        foreach($arr as $item){
+
+            echo $item;
+?>
+<script>
+
+                    var id = <?php echo $item; ?>;
+
+                    $.ajax({
+                            url:"http://localhost:8001/productdetailgetter/",
+                            method: "POST",
+                            data: {"proid": id},
+                            success: function(data){
+                                console.log(data)
+                            }
+                        })  
+
+</script>
+<?php 
+        }
 
 ?>
-        <script>
-                eles = <?php echo $productqw[$i]; ?>;
-                ids = eles["product_ids"].split(",")
-                var parent = document.querySelector(".pastorders");
-                var html = `<div class="order"> 
-                    <h1>Order:</h1>
-                `;
-                for(let l=0; l<ids.length; l++){
-                    $.ajax({
-                        url:"http://localhost:8001/productdetailgetter/",
-                        method: "POST",
-                        data: {"proid": ids[l]},
-                        success: function(data){
-                            console.log(data)
-                            html = html + data;
-                        }
-                    })
-                }
-                html = html + `</div>`;
-                console.log(html)
-        </script>
-<?php 
+        <?php 
     }
 ?>
-
-
