@@ -15,18 +15,24 @@
     <link rel="stylesheet" href="{{URL::asset('css/vendor/FontAwesome/Fontawesomecss/all.css')}}">
 </head>
 <body>
-        
+    
     <?php $title = "cart"; ?>
     <x-header />
     <x-banner :type="$title"/>
 
     <div class="cartcontainer">
+       
+        @if(empty($destination))
+            {{"Your Cart is Empty. Please add items."}}
+        @else
         <x-destinationblock :destinations="$destination"/>
         <x-freelancerblock :freelancers="$freelancer"/>
         <h1>Products</h1>
         <x-productblock :products="$product"/>
         <x-transport :destinations="$destination" :costs="$cost"/>
         <x-downloadcart :destinations="$destination"/>
+        @endif
+
     </div>
     
     <x-footer />

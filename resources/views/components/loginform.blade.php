@@ -11,7 +11,7 @@
             <i class="fas fa-unlock-alt form__icon"></i>
             <input class="form__input" name="pass" type="text" placeholder="Enter Your Password"><br><br>
         </div>   
-        <button type="submit" class="submit">Register</button>
+        <button type="submit" class="submit">Login</button>
     </form>
     <!-- Knowing is not enough; we must apply. Being willing is not enough; we must do. - Leonardo da Vinci -->
 </div>

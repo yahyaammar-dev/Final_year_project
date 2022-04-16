@@ -330,7 +330,7 @@
             <i class="fa fa-user adddestinationform__icon"></i>
             <input type="text" class="adddestinationform__input lawtype" placeholder="Enter law's typr" name="lawtype"  class="lawtype">
             <i class="fa fa-user adddestinationform__icon"></i>
-            <input type="text" class="adddestinationform__input law" placeholder="Enter law's text" name="lawtext" class="lawtext">
+            <input type="text" class="adddestinationform__input lawtext" placeholder="Enter law's text" name="lawtext" class="lawtext">
         </div>
 
         <button class="adddestinationform__addlaw submit">Add law</button>

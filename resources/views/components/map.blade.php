@@ -2,7 +2,22 @@
 
 
 
+<?php
 
+        $i=0;
+        while(true){
+            if(isset($dataa[$i])){
+                echo $i;
+                break;
+            }
+            $i++;
+        }
+       
+ 
+
+
+
+?>
 
 
 
@@ -31,13 +46,13 @@
         let map;
         function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
-            center: {lat: <?php echo $dataa[0]["coordx"];?>, lng: <?php  echo $dataa[0]["coordy"]; ?>},
+            center: {lat: <?php echo $dataa[$i]["coordx"];?>, lng: <?php  echo $dataa[$i]["coordy"]; ?>},
             zoom: 10,
         });
       
 
         new google.maps.Marker({
-            position: {lat: <?php echo $dataa[0]["coordx"];?>, lng: <?php  echo $dataa[0]["coordy"]; ?>},
+            position: {lat: <?php echo $dataa[$i]["coordx"];?>, lng: <?php  echo $dataa[$i]["coordy"]; ?>},
             map
         });
 

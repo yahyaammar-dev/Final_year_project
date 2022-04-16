@@ -13,6 +13,7 @@
 </head>
 <body>
 
+
     <x-header />
     <x-userinfo :user="$user" :productqw="$product"/>
     <!-- Two blocks -->

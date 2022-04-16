@@ -14,7 +14,7 @@
         </div>
     </div>
 </section>
-
+<!-- 
 
 <section class="pastorders">
 
@@ -68,4 +68,4 @@
 ?>
         <?php 
     }
-?>
+?> -->

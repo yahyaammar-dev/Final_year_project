@@ -9,39 +9,12 @@
 
     for($i=0; $i<count($abc["freelancer"]); $i++){
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
+  
 ?>
-
-
-
-
-
-
-
-
-
-
-
 
 <script>
 
-    
-
     var id = '<?php echo  $abc["freelancer"][$i]['id']; ?>';
-
-
 
     $.ajax({
         url:"http://localhost:8001/Calculatereviews",
@@ -159,39 +132,16 @@
                             ele.innerHTML = "<i class=\"fas fa-star-half-alt\"></i>";
                         }
                     }
-
-
-
-
-
                 }
-
             }
-
-
-
-
         }
     });
 </script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="block">
 
-
-        <?php $url = "images/" . $abc["images"][$i][0]["url"];  ?>
+    <?php $url = "images/" . $abc["images"][0][0]["url"];  ?>
 
     <img src="<?php echo $url; ?>" alt="" class="blocks__image">
     <div class="block__info">
@@ -205,11 +155,6 @@
 </div>
 
 
-
-
-
-
-
 <?php 
 
 }
@@ -221,8 +166,3 @@
 
     </div>
 </div>
-
-
-
-
-

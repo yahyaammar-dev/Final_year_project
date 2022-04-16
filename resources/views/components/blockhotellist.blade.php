@@ -1,11 +1,11 @@
 <h1 class="relatedhotels">Related Hotels</h1>
 <section class="blockscontainer">
     <div class="blocks">
-        <div class="blocks__list">
+        <div class="blocks__list" style="flex-wrap: nowrap">
     <?php
         foreach($hotel as $item){
             ?>
-            <div class="blockhotel">
+            <div class="blockhotel" style="width: 40%;">
                 <?php
                 $url =  "images/" . $item["image"][0]["url"];
                 ?>
@@ -19,7 +19,7 @@
                     <pre class="blocks__ratings"></pre>
                 </div>
             </div>
-        <?php
+        <?php 
         }
         ?>
         </div>

@@ -1,3 +1,5 @@
+
+
 <div class="listing stories">
     <?php
     
@@ -8,7 +10,6 @@
         <div class="stories__card">
 
         <?php
-        echo '<h1 class="blogged_id">' . $item["blog_id"] . '</h1>';
         echo '<h1>' . $item["name"] . '</h1>';
         echo '<br>';
         echo $item["content"];

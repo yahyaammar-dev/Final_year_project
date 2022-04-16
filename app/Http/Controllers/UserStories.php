@@ -16,7 +16,7 @@ class UserStories extends Controller
         for($i=0; $i<count($data); $i++){
             $info[$i]["name"] = $data[$i]->name;
             $info[$i]["blog_id"] = $data[$i]->blog_id;
-            $info[$i]["content"] =  html_entity_decode($data[0]->content);
+            $info[$i]["content"] =  html_entity_decode($data[$i]->content);
         }
 
         return view("userstroies", [
@@ -26,3 +26,4 @@ class UserStories extends Controller
 
     }
 }
+

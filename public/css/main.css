@@ -2586,4 +2586,55 @@ tbody {
 .singleuserstory .heading {
   margin-bottom: 3rem;
 }
+
+.formContainer .form .form__loginlinkurl {
+  color: #ff9500;
+}
+
+.userinfocontainer {
+  width: 100%;
+}
+
+.reviews__form .reviews__center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.instatravelers__name {
+  text-decoration: none;
+  color: black;
+}
+
+.instatravelers_itemimage {
+  height: 250px;
+  width: 180px;
+}
+
+.visainfo__main {
+  width: 70%;
+}
+
+.listing__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blocks__image {
+  width: 400px;
+  height: 400px;
+}
 /*# sourceMappingURL=main.css.map */

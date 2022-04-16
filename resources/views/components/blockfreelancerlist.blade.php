@@ -28,10 +28,10 @@
 
 
 
-
+<!-- 
 </div>
         <button type="submit" class="submit">Load More</button>
-    </div>
+    </div> -->
 </section>
 
 

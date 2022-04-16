@@ -37,106 +37,106 @@ class Adddestination extends Controller
 
 
         //Inserting the desination
-        // $add = new Adddestinationm;
-        // $add->destination_id = $data->destination_id;
-        // $add->name = $data->name;
-        // $add->city = $data->name;
-        // $add->coordx = $data->coordx;
-        // $add->coordy = $data->coordy;
-        // $add->price = $data->price;
-        // $add->description = $data->description;
-        // $add->type = $data->type;
-        // $add->regions = $data->region;
-        // $add->weather = $data->weather;
-        // $add->save();
+        $add = new Adddestinationm;
+        $add->destination_id = $data->destination_id;
+        $add->name = $data->name;
+        $add->city = $data->name;
+        $add->coordx = $data->coordx;
+        $add->coordy = $data->coordy;
+        $add->price = $data->price;
+        $add->description = $data->description;
+        $add->type = $data->type;
+        $add->regions = $data->region;
+        $add->weather = $data->weather;
+        $add->save();
         
-        //  inserting the videos
-        // $videos = $data->videos;
-        // $videosids = array();
-        // foreach($videos as $video){
-        //     $addvideos = new Videos;
-        //     //getting the ids
-        //     $maxid = videos::select('id')->orderBy('id', 'desc')->first(); 
-        //     $maxid = (int)$maxid['id'];
-        //     $vid = $maxid+1;
-        //     array_push($videosids,$vid);    
-        //     //store url
-        //     $addvideos->url = $video;
-        //     $addvideos->save();
-        // }
+         //inserting the videos
+        $videos = $data->videos;
+        $videosids = array();
+        foreach($videos as $video){
+            $addvideos = new Videos;
+            //getting the ids
+            $maxid = videos::select('id')->orderBy('id', 'desc')->first(); 
+            $maxid = (int)$maxid['id'];
+            $vid = $maxid+1;
+            array_push($videosids,$vid);    
+            //store url
+            $addvideos->url = $video;
+            $addvideos->save();
+        }
 
-        // //inserting in destination and videos
-        // foreach($videosids as $video){
-        //     $destination_videos = new Destination_Videos;
-        //     $destination_videos->destination = $id;
-        //     $destination_videos->video = $video;
-        //     $destination_videos->save();
-        // }       
+        //inserting in destination and videos
+        foreach($videosids as $video){
+            $destination_videos = new Destination_Videos;
+            $destination_videos->destination = $data->destination_id;
+            $destination_videos->video = $video;
+            $destination_videos->save();
+        }       
 
 
         
 
-    //    $hotels = $data->hotels;
-    //     $hotelids = array();
-    //       foreach($hotels as $item){
-    //         $maxid = hotel::select('id')->orderBy('id', 'desc')->first(); 
-    //         $maxid = (int)$maxid['id'];
-    //         $hid = $maxid+1;
-    //         array_push($hotelids,$hid);
-    //         $addh = new hotel;
-    //         $addh->name = $item[0];
-    //         $addh->description = $item[1];
-    //         $addh->price = $item[2];
-    //         $addh->phone = $item[3];
-    //         $addh->coordx = $item[4];
-    //         $addh->coordy = $item[5];
-    //         $addh->save();
-    //         }
+       $hotels = $data->hotels;
+        $hotelids = array();
+          foreach($hotels as $item){
+            $maxid = hotel::select('id')->orderBy('id', 'desc')->first(); 
+            $maxid = (int)$maxid['id'];
+            $hid = $maxid+1;
+            array_push($hotelids,$hid);
+            $addh = new hotel;
+            $addh->name = $item[0];
+            $addh->description = $item[1];
+            $addh->price = $item[2];
+            $addh->phone = $item[3];
+            $addh->coordx = $item[4];
+            $addh->coordy = $item[5];
+            $addh->save();
+            }
 
 
-    //         $hotelv = $data->hotelvideos;           
+            $hotelv = $data->hotelvideos;           
 
-    //         for($i=0; $i<count($hotelids); $i++){
-    //             for($j=0; $j<count($hotelv); $j++){
-    //                 if( $i+1 == $hotelv[$j][0] ){
-    //                     print_r($hotelv[$j][1]);
-    //                     $addv  = new Videos;
-    //                     $addv->url = $hotelv[$j][1];
-    //                     $addv->save();
+            for($i=0; $i<count($hotelids); $i++){
+                for($j=0; $j<count($hotelv); $j++){
+                    if( $i+1 == $hotelv[$j][0] ){
+                        print_r($hotelv[$j][1]);
+                        $addv  = new Videos;
+                        $addv->url = $hotelv[$j][1];
+                        $addv->save();
 
-                            // $maxid = Videos::select('id')->orderBy('id', 'desc')->first(); 
-                            // $maxid = (int)$maxid['id'];
-                            // $videoid = $maxid;
+                            $maxid = Videos::select('id')->orderBy('id', 'desc')->first(); 
+                            $maxid = (int)$maxid['id'];
+                            $videoid = $maxid;
 
-    //                     $addhotelVideo= new Hotel_Videos;
-    //                     $addhotelVideo->hotel= $hotelids[$i];
-    //                     $addhotelVideo->video= $videoid;
-    //                     $addhotelVideo->save();
-    //                 }
-    //             }
-    //         }
+                        $addhotelVideo= new Hotel_Videos;
+                        $addhotelVideo->hotel= $hotelids[$i];
+                        $addhotelVideo->video= $videoid;
+                        $addhotelVideo->save();
+                    }
+                }
+            }
     
 
-    //         for($i=0; $i<count($hotels); $i++){
-    //            $images = $hotels[$i][6][0];
-    //            foreach($images as $image){
-    //                 $addi = new Images;
-    //                 $addi->url = $image;
-    //                 $addi->save();
+            for($i=0; $i<count($hotels); $i++){
+               $images = $hotels[$i][6][0];
+               foreach($images as $image){
+                    $addi = new Images;
+                    $addi->url = $image;
+                    $addi->save();
 
-    //                 $maxid = Images::select('images_id')->orderBy('images_id', 'desc')->first(); 
-    //                 $maxid = (int)$maxid['images_id'];
-    //                 $imageid = $maxid;
-    //                 $hotelids[$i];
+                    $maxid = Images::select('images_id')->orderBy('images_id', 'desc')->first(); 
+                    $maxid = (int)$maxid['images_id'];
+                    $imageid = $maxid;
+                    $hotelids[$i];
 
         
-    //                 $addhotelimage= new Hotel_Images;
-    //                 $addhotelimage->images= $imageid;
-    //                 $addhotelimage->hotel= $hotelids[$i];
-    //                 $addhotelimage->save();
+                    $addhotelimage= new Hotel_Images;
+                    $addhotelimage->images= $imageid;
+                    $addhotelimage->hotel= $hotelids[$i];
+                    $addhotelimage->save();
 
-    //            }
-    //         }
+               }
+            }
     
         
         
@@ -280,7 +280,7 @@ class Adddestination extends Controller
             // print_r($product[0][4]);
             
             
-            // for($i=0; $i<count($product); $i++){
+  //          for($i=0; $i<count($product); $i++){
             //    $images = $product[$i][4][0];
             //    foreach($images as $image){
             //         $addi = new Images;
@@ -306,25 +306,25 @@ class Adddestination extends Controller
 
         //Inserting the laws
         
-            // $laws = $data->laws;
+            $laws = $data->laws;
 
-            // foreach($laws as $law){
-            //     print_r($law);
-            //     $add = new Laws;
-            //     $add->type = $law[0];
-            //     $add->content = $law[1];
-            //     $add->save();
+            foreach($laws as $law){
+                print_r($law);
+                $add = new Laws;
+                $add->type = $law[0];
+                $add->content = $law[1];
+                $add->save();
 
-            //     $maxid = laws::select('id')->orderBy('id', 'desc')->first(); 
-            //     $maxid = (int)$maxid['id'];
-            //     $lawid = $maxid;
+                $maxid = laws::select('id')->orderBy('id', 'desc')->first(); 
+                $maxid = (int)$maxid['id'];
+                $lawid = $maxid;
 
-            //     $addd_l = new Destination_laws;
-            //     $addd_l->destination = $data->destination_id;
-            //     $addd_l->laws = $lawid;
-            //     $addd_l->save();
+                $addd_l = new Destination_laws;
+                $addd_l->destination = $data->destination_id;
+                $addd_l->laws = $lawid;
+                $addd_l->save();
             
-            // }
+            }
 
         
             print_r($data->contacts);
@@ -356,6 +356,6 @@ class Adddestination extends Controller
 
 
 
-    //return redirect('adddestination');
+    return redirect('adddestination');
     }
     }

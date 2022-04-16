@@ -7,9 +7,11 @@
                     <a class="footer__link" href="#"><li class="footer__listitem">About</li></a>
                     <a class="footer__link" href=""><li class="footer__listitem">Contact</li></a>
                     <a class="footer__link" href="http://localhost:8001/visas"><li class="footer__listitem">Visas</li></a>
+                    <a class="footer__link" href="http://localhost:8001/userstories"><li class="footer__listitem">UserStories</li></a>
+                    <a class="footer__link" href="http://localhost:8001/writeblog"><li class="footer__listitem">WriteStory</li></a>
                 </ul>  
             </div>
-            <div class="footer__section">
+            <div class="footer__section"> 
                 <h2 class="footer__secheading">Destinations</h2>
                 <ul class="footer__list">
                     <li class="footer__listitem">Muree</li>

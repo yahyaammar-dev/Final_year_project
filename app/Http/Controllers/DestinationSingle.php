@@ -93,18 +93,43 @@ class DestinationSingle extends Controller
     
         //Products of destinations
         $products = destination_product::select('product')->where('destination',$sid)->get();
+
         $productItem = [];
         for($i=0; $i<count($products); $i++){            
             $data = product::select('id','name','description','price','type')->where('id',$products[$i]["product"])->get();
             
-            $imageId = ProductImages::select('images')->where('product',$data[0]['id'])->get();
-            $image = Images::select('url')->where('images_id',$imageId[0]["images"])->get();
+            
+
+         
+            if(count($data)>0){
+                $imageId = ProductImages::select('images')->where('product',$data[0]['id'])->get();
+        
+                if(count($imageId)>0){
+               
+                    $image = Images::select('url')->where('images_id',$imageId[0]["images"])->get();
+
+
+
+
                     
             $srcee[$i]['image']= $image;
             $srcee[$i]['data']= $data;
             $productItem[$i] = $srcee;
+                }        
+    
+        
+            }
+
+            
+        
+
+
+
 
         }
+
+
+
         //Hotels of destinations
         $hotels = destination_hotel::select('hotel')->where('destination',$sid)->get();
         $hotelItem = [];

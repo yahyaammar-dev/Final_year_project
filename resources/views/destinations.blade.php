@@ -21,21 +21,12 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <style>
-
 #map {
   height: 100%;
 }
-
-
 </style>
-
-
-
 </head>
 <body>
-
-
-
 
     <x-header />
     <x-videos :id="$id" :dataa="$dataa" :videos="$videos"/>

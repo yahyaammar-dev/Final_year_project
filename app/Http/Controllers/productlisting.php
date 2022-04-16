@@ -25,10 +25,13 @@ class productlisting extends Controller
             array_push($imageIds,$imageId);
         }
     
+        
         $images = [];
         foreach($imageIds as $id){
-            $image = Images::select('url')->where('images_id',$id[0]["images"])->get();
-            array_push($images, $image);
+            if(!count($id)==0){
+                $image = Images::select('url')->where('images_id',$id[0]["images"])->get();
+                array_push($images, $image);
+            }
         }
 
 

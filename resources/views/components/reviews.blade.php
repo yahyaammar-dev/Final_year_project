@@ -1,17 +1,9 @@
 <h1 class="reviews__heading">Reviews</h1>
 
-
-
 <?php 
-    
     $user = session('user');
     if(isset($user)){
-     
-      
       ?>
-
-
-      
 
       <form method="POST" class="reviews__form" action="http://localhost:8001/submitreview">
 
@@ -19,11 +11,11 @@
         <input type="text" name="id" class="id reviews__hidden"/>
         <input type="text" name="type" value="destination" class="destination reviews__hidden"/>
         <label for="content">Text</label>
-        <input type="text" name="content" /><br>
+        <input type="text" name="content" />
         <label for="rating">Rating</label>
-        <input type="range" name="rating" min="0" max="5"/><br>
-        <input type="text" name="author" class="reviews__hidden author" step="0.5"/><br>
-        <input type="text" name="email" class="reviews__hidden email"/><br>
+        <input type="range" name="rating" min="0" max="5"/>
+        <input type="text" name="author" class="reviews__hidden author" step="0.5"/>
+        <input type="text" name="email" class="reviews__hidden email"/>
         <input type="submit" name="submit" value="submit" class="submit" />
       </div>
 
@@ -99,6 +91,6 @@
           
 
         });
-        </script>
+</script>
 
 

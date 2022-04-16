@@ -13,11 +13,7 @@ class hotellisting extends Controller
     
     public function hotellisting(){
 
-
-        
         $src = hotel::select('id','name','description','price','phone')->get();
-    
-        
     
         $imageIds=[];
         foreach($src as $item){
@@ -34,19 +30,7 @@ class hotellisting extends Controller
         $data['hotel']= $src ;
         $data['images'] = $images;
     
-        return view('hotellisting',['data'=>$data]);
-        
-    
-
-
-
+        return view('hotellisting',['data'=>$data]);   
+ 
     }
-
 }
-
-
-
-
-
-
-

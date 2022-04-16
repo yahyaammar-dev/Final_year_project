@@ -1,3 +1,7 @@
+
+
+
+
 <div class="listing__main">
     <div class="listing__content">
     <?php for($i=0; $i<count($abc["product"]); $i++){ ?>
@@ -130,7 +134,7 @@
     <div class="productsingle">
 
         <div class="block">
-                <?php $url = "images/" . $abc["images"][$i][0]["url"];  ?>
+                <?php $url = "images/" . $abc["images"][0][0]["url"];  ?>
 
             <img src="<?php echo $url; ?>" alt="" class="blocks__image">
             <div class="block__info">

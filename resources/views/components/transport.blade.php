@@ -27,18 +27,14 @@
                 break;
             }
 
-
             $firstlat = $first[0]->coordx;
             $firstlon = $first[0]->coordy;
-            
-
+        
         ?>
-
 
             <div id="location"></div>
             <div id="location2"></div>
-
-
+            
 <script>
 
 

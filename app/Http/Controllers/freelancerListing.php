@@ -21,14 +21,22 @@ class freelancerListing extends Controller
 
     $imageIds=[];
     foreach($src as $item){
-        $imageId = FreelancerImages::select('images')->where('freelancer',$item['id'])->get();
-        array_push($imageIds,$imageId);
+        if(empty($item)){
+            
+        }else{
+            $imageId = FreelancerImages::select('images')->where('freelancer',$item['id'])->get();
+            array_push($imageIds,$imageId);
+        }
     }
 
     $images = [];
     foreach($imageIds as $id){
+        if(count($id)==0){
+            
+        }else{
         $image = Images::select('url')->where('images_id',$id[0]["images"])->get();
         array_push($images, $image);
+        }
     }
     
     $data['freelancer']= $src ;
